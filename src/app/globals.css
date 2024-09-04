@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hover-bold {
+  font-weight: 400; /* Regular weight */
+  transition: 0.3s ease;
+}
+
+.hover-bold:hover {
+  font-weight: 700; /* Bold weight */
+}
+
+.bg-custom-pattern {
+  background-image: url('/BG/BG/Background.jpg');
+  background-repeat: repeat; /* Repeat pattern */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
