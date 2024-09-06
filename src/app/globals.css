@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.hover-bold {
-  font-weight: 400; /* Regular weight */
-  transition: 0.3s ease;
-}
-
-.hover-bold:hover {
-  font-weight: 700; /* Bold weight */
-}
-
 .bg-custom-pattern {
   background-image: url('/BG/BG/Background.jpg');
   background-repeat: repeat; /* Repeat pattern */
@@ -20,4 +11,34 @@
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.rolling-text-container {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.rolling-char {
+  display: inline-block;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+  transform: translateY(0);
+  font-style: normal;
+}
+
+.rolling-text-container:hover .rolling-char {
+  transform: translateY(-100%);
+  opacity: 0;
+  font-style: italic;
+}
+
+.rolling-text-container:hover .rolling-char::after {
+  content: attr(data-char);
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 1;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
