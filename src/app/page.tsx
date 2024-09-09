@@ -1,16 +1,45 @@
-import React from 'react';
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import ProjectList from '../components/ProjectList';
-import ContactComponent from '../components/ContactComponent';
+'use client';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import '../sass/main.scss';
 
-export default function Home() {
+// Components
+import Header from '../components/Header';
+import Banner from '../components/Banner';
+import Loader from '../components/Loader';
+
+function Page() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loading
+      ? document.querySelector('body')?.classList.add('loading')
+      : document.querySelector('body')?.classList.remove('loading');
+  }, [loading]);
+
   return (
-    <main className='bg-custom-pattern min-h-screen'>
-      <Header />
-      <Hero />
-      <ProjectList />
-      <ContactComponent />
-    </main>
+    <AnimatePresence>
+      {loading ? (
+        <motion.div key='loader'>
+          <Loader setLoading={setLoading} />
+        </motion.div>
+      ) : (
+        <>
+          <Header />
+          <Banner />
+          {!loading && (
+            <div className='transition-image final'>
+              <motion.img
+                transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
+                src={`/images/image-2.jpg`}
+                layoutId='main-image-1'
+              />
+            </div>
+          )}
+        </>
+      )}
+    </AnimatePresence>
   );
 }
+
+export default Page;
