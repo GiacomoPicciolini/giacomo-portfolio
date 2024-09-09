@@ -1,11 +1,8 @@
-// pages/index.tsx
-'use client';
-
 import React from 'react';
-import Header from '../../components/Header';
-import Hero from '../../components/Hero';
-import ProjectList from '../../components/ProjectList';
-import ContactComponent from '../../components/ContactComponent';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import ProjectList from '../components/ProjectList';
+import ContactComponent from '../components/ContactComponent';
 
 export default function Home() {
   return (
