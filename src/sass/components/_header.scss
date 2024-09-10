@@ -5,85 +5,82 @@
   justify-content: center;
   padding: 0 108px;
   color: $black;
+
   @media (max-width: $layout-breakpoint-medium) {
     padding: 0 72px;
     font-size: 1.6rem;
   }
+
   @media (max-width: $layout-breakpoint-xsmall) {
     padding: 0 12px;
-    height: 96px;
     font-size: 1.2rem;
   }
+
   .header-inner {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .logo {
-      font-weight: 700;
-      font-size: 3.6rem;
-      @media (max-width: $layout-breakpoint-medium) {
-        font-size: 3.2rem;
-        flex: 4;
-      }
-    }
+
     .nav {
-      @media (max-width: $layout-breakpoint-medium) {
-        display: none;
-      }
       display: flex;
       align-items: center;
       justify-content: center;
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
+
       li {
         list-style: none;
         margin: 0 40px;
+        position: relative; // Needed for positioning the pseudo-element
+        transition: opacity 0.3s ease; // Smooth transition for opacity changes
+
         a {
           text-decoration: none;
           color: $black;
           white-space: nowrap;
+          position: relative; // Ensures the pseudo-element is positioned relative to the link
+
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0; // Adjusts the underline position
+            left: 0;
+            width: 0;
+            height: 2px; // Set the height of the underline
+            background-color: $black; // Use your preferred color
+            transition: width 0.3s ease-in-out; // Animates the underline
+          }
+
+          &:hover::after,
+          &:active::after {
+            width: 100%; // Expands the underline on hover or active
+          }
         }
       }
-    }
-    .contact {
-      @media (max-width: $layout-breakpoint-medium) {
-        flex: 1;
+
+      // Applying the opacity change when hovering over any li within .nav
+      &:hover li {
+        opacity: 0.5; // Set reduced opacity for non-hovered items
       }
-      a {
-        color: $black;
-        text-decoration: none;
-        border-bottom: 2px solid $black;
-        padding-bottom: 12px;
-        white-space: nowrap;
-        @media (max-width: $layout-breakpoint-xsmall) {
-          border: none;
+
+      // Increase opacity on the currently hovered li
+      li:hover {
+        opacity: 1;
+      }
+
+      @media (max-width: $layout-breakpoint-small) {
+        flex-direction: column;
+        position: static;
+        align-items: start;
+        left: auto;
+        transform: none;
+
+        li {
+          margin: 6px 0;
         }
-      }
-    }
-    .hamburger-menu {
-      height: 56px;
-      width: 56px;
-      border-radius: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
-      cursor: pointer;
-      &:hover {
-        background: darken($color: $white, $amount: 12);
-      }
-      @media (min-width: $layout-breakpoint-medium) {
-        display: none;
-      }
-      span {
-        width: 20px;
-        height: 3px;
-        margin: 2px 0;
-        background: $black;
-        display: block;
       }
     }
   }

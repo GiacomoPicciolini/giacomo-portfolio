@@ -54,16 +54,12 @@ const Loader = ({ setLoading }) => {
         exit="exit"
         className="loader-inner"
       >
-        <ImageBlock variants={item} id="image-1" />
         <motion.div variants={itemMain} className="transition-image">
           <motion.img
             layoutId="main-image-1"
             src={`/images/image-2.jpg`}
           />
         </motion.div>
-        <ImageBlock variants={item} id="image-3" />
-        <ImageBlock variants={item} id="image-4" />
-        <ImageBlock variants={item} id="image-5" />
       </motion.div>
     </motion.div>
   );

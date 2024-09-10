@@ -14,31 +14,20 @@ const Header = () => {
       }}
       className='header'>
       <div className='header-inner'>
-        <div className='logo'>Ollie</div>
         <nav className='nav'>
           <li>
-            <a href='/design'>Design</a>
+            <a href='/hey'>01/HEY</a>
           </li>
           <li>
-            <a href='/strategy'>Strategy</a>
+            <a href='/about'>02/ABOUT</a>
           </li>
           <li>
-            <a href='/cases'>Cases</a>
+            <a href='/work'>03/WORK</a>
           </li>
           <li>
-            <a href='/about'>About</a>
-          </li>
-          <li>
-            <a href='/why'>Why work with us?</a>
+            <a href='/contact'>04/CONTACT</a>
           </li>
         </nav>
-        <div className='contact'>
-          <a href='/contact'>Lets work together</a>
-        </div>
-        <div className='hamburger-menu'>
-          <span></span>
-          <span></span>
-        </div>
       </div>
     </motion.div>
   );
