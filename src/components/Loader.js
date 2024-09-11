@@ -1,9 +1,6 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-import Image from "./Image";
-
 
 const container = {
   show: {
@@ -44,43 +41,44 @@ const itemMain = {
 };
 
 const Loader = ({ setLoading }) => {
+  const [loadingPercentage, setLoadingPercentage] = useState(10);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLoadingPercentage((prev) => {
+        if (prev < 100) {
+          return prev + 10;
+        } else {
+          clearInterval(interval);
+          setLoading(false);
+          return prev;
+        }
+      });
+    }, 300);
+
+    return () => clearInterval(interval);
+  }, [setLoading]);
+
   return (
     <motion.div className="loader">
       <motion.div
         variants={container}
-        onAnimationComplete={() => setLoading(false)}
         initial="hidden"
         animate="show"
         exit="exit"
         className="loader-inner"
       >
-        <motion.div variants={itemMain} className="transition-image">
-          <motion.img
-            layoutId="main-image-1"
-            src={`/images/image-2.jpg`}
-          />
+        <motion.div variants={itemMain} className="transition-text">
+          <motion.h1
+            className="loading-text"
+            style={{ perspective: "1000px" }}
+          >
+            {loadingPercentage}%
+          </motion.h1>
         </motion.div>
       </motion.div>
     </motion.div>
   );
 };
 
-export const ImageBlock = ({ posX, posY, variants, id }) => {
-  return (
-    <motion.div
-      variants={variants}
-      className={`image-block ${id}`}
-      style={{
-        top: `${posY}vh`,
-        left: `${posX}vw `,
-      }}
-    >
-      <Image
-        src={`/images/${id}.webp`}
-        fallback={`/images/${id}.jpg`}
-        alt={id}
-      />
-    </motion.div>
-  );
-};
 export default Loader;

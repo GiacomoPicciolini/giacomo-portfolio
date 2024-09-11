@@ -1,6 +1,11 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from 'framer-motion';
 import '../sass/main.scss';
 
 // Components
@@ -27,17 +32,6 @@ function Page() {
         <>
           <Header />
           <Banner />
-          {!loading && (
-            <div className='transition-image final'>
-              <motion.video
-                autoPlay
-                loop
-                transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
-                src={`/BG/BG/contact.mp4`}
-                layoutId='main-image-1'
-              />
-            </div>
-          )}
         </>
       )}
     </AnimatePresence>
