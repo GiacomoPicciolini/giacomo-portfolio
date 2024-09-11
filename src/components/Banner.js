@@ -32,9 +32,9 @@ const Banner = () => {
   }, []);
   return (
     <motion.div className='banner' variants={banner}>
-      <BannerRowTop title={"brand"} />
-      <BannerRowCenter title={"experience"} playMarquee={playMarquee} />
-      <BannerRowBottom title={"studio"} />
+      <BannerRowTop />
+      <BannerRowCenter playMarquee={playMarquee} />
+      <BannerRowBottom />
     </motion.div>
   );
 };
@@ -56,11 +56,11 @@ const AnimatedLetters = ({ title, disabled }) => (
   </motion.span>
 );
 
-const BannerRowTop = ({ title }) => {
+const BannerRowTop = () => {
   return (
     <div className={"banner-row"}>
       <div className='row-col'>
-        <AnimatedLetters title={title} />
+
       </div>
       <motion.div
         initial={{ opacity: 0, y: 80 }}
@@ -71,18 +71,19 @@ const BannerRowTop = ({ title }) => {
           delay: 0.4,
         }}
         className='row-col'>
-        <span className='row-message'>
-          We are specialised in setting up the foundation of your brand and
-          setting you up for success.
-        </span>
+        <p className='row-message'>
+          Simple solutions require complex processes. <br />
+          I’m a UX/UI designer based in Luzern.<br />
+          These are the latest projects that speak most about me.
+        </p>
       </motion.div>
     </div>
   );
 };
 
-const BannerRowBottom = ({ title }) => {
+const BannerRowBottom = () => {
   return (
-    <div className={"banner-row center"}>
+    <div className={"banner-row left"}>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
@@ -109,12 +110,24 @@ const BannerRowBottom = ({ title }) => {
           down
         </motion.span>
       </motion.div>
-      <AnimatedLetters title={title} />
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          ease: "easeInOut",
+          duration: 1,
+          delay: 0.4,
+        }}
+        className='row-col'>
+        <p className='row-message-2'>
+          I am poised to bring a strategic and user-focused approach to all the projects, contributing to the success and innovation of the final products.
+        </p>
+      </motion.div>
     </div>
   );
 };
 
-const BannerRowCenter = ({ title, playMarquee }) => {
+const BannerRowCenter = ({ playMarquee }) => {
   return (
     <div className={`banner-row marquee  ${playMarquee && "animate"}`}>
       <motion.div
@@ -122,10 +135,10 @@ const BannerRowCenter = ({ title, playMarquee }) => {
         animate={{ y: 0 }}
         transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
         className='marquee__inner'>
-        <AnimatedLetters title={title} disabled />
-        <AnimatedLetters title={title} />
-        <AnimatedLetters title={title} disabled />
-        <AnimatedLetters title={title} disabled />
+        <AnimatedLetters title={"latest work"} disabled />
+        <AnimatedLetters title={"latest work"} />
+        <AnimatedLetters title={"latest work"} disabled />
+        <AnimatedLetters title={"latest work"} disabled />
       </motion.div>
     </div>
   );

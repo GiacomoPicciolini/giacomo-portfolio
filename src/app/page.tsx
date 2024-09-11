@@ -29,9 +29,11 @@ function Page() {
           <Banner />
           {!loading && (
             <div className='transition-image final'>
-              <motion.img
+              <motion.video
+                autoPlay
+                loop
                 transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
-                src={`/images/image-2.jpg`}
+                src={`/BG/BG/contact.mp4`}
                 layoutId='main-image-1'
               />
             </div>
