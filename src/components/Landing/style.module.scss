@@ -35,11 +35,12 @@
 
   .description {
     position: absolute;
-    top: 25%;
-    left: 55%;
+    top: 15%;
+    left: 45%;
     color: #111;
-    font-size: 23px;
-    font-weight: 200;
+    font-size: 38px;
+    font-weight: 400;
+    font-style: italic;
 
     p {
       margin: 0px;
@@ -49,6 +50,51 @@
     svg {
       transform: scale(2);
       margin-bottom: 100px;
+    }
+  }
+
+  /* For large desktops */
+  @media (min-width: 1200px) {
+    .description {
+      font-size: 38px;
+      top: 15%;
+      left: 45%;
+    }
+  }
+
+  /* For smaller desktops and laptops */
+  @media (max-width: 1199px) and (min-width: 992px) {
+    .description {
+      font-size: 34px;
+      top: 18%;
+      left: 40%;
+    }
+  }
+
+  /* For tablets */
+  @media (max-width: 991px) and (min-width: 768px) {
+    .description {
+      font-size: 28px;
+      top: 20%;
+      left: 35%;
+    }
+  }
+
+  /* For mobile devices */
+  @media (max-width: 767px) and (min-width: 576px) {
+    .description {
+      font-size: 24px;
+      top: 15%;
+      left: 20%;
+    }
+  }
+
+  /* For small mobile devices */
+  @media (max-width: 575px) {
+    .description {
+      font-size: 20px;
+      top: 10%;
+      left: 10%;
     }
   }
 }
