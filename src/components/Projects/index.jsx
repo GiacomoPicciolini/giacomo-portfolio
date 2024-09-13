@@ -9,24 +9,22 @@ import Rounded from '../../common/RoundedButton';
 
 const projects = [
   {
-    title: "C2 Montreal",
-    src: "c2montreal.png",
+    title: "Pilatus Aircraft",
+    subtitle: "VR Design / Web Design",
+    src: "/Pilatus/Pilatus/MPS-MOCKUP.jpg",
     color: "#000000"
   },
   {
-    title: "Office Studio",
-    src: "officestudio.png",
+    title: "Sharely",
+    subtitle: "Desktop / Mobile App",
+    src: "/Sharely/Sharely/thumbnail_sharely1.jpg",
     color: "#8C8C8C"
   },
   {
-    title: "Locomotive",
-    src: "locomotive.png",
+    title: "Sky Television",
+    subtitle: "OTT App / Mobile App",
+    src: "/Sky/Sky/sky2.jpg",
     color: "#EFE8D3"
-  },
-  {
-    title: "Silencio",
-    src: "silencio.png",
-    color: "#706D63"
   }
 ]
 
@@ -81,7 +79,7 @@ export default function Home() {
       <div className={styles.body}>
         {
           projects.map((project, index) => {
-            return <Project index={index} title={project.title} manageModal={manageModal} key={index} />
+            return <Project index={index} title={project.title} subtitle={project.subtitle} manageModal={manageModal} key={index} />
           })
         }
       </div>
@@ -93,7 +91,7 @@ export default function Home() {
                 const { src, color } = project
                 return <div className={styles.modal} style={{ backgroundColor: color }} key={`modal_${index}`}>
                   <Image
-                    src={`/images/${src}`}
+                    src={src}
                     width={300}
                     height={0}
                     alt="image"

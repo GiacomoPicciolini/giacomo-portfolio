@@ -41,8 +41,8 @@ export default function index() {
                 <div className={styles.info}>
                     <div>
                         <span>
-                            <h3>Author</h3>
-                            <p>2024 © Matteo Dante</p>
+                            <h3></h3>
+                            <p>©2024</p>
                         </span>
                     </div>
                     <div>
