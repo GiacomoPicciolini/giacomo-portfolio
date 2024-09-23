@@ -36,18 +36,6 @@ export default function index() {
         <>
             <div ref={header} className={styles.header}>
                 <div className={styles.nav}>
-
-                    <Magnetic>
-                        <div className={styles.el}>
-                            <div className={styles.logo}>
-                                <p className={styles.copyright}>©</p>
-                                <div className={styles.name}>
-                                    <p className={styles.codeBy}>2024</p>
-                                </div>
-                            </div>
-                        </div>
-                    </Magnetic>
-
                     <Magnetic>
                         <div className={styles.el}>
                             <a>01/HEY</a>
