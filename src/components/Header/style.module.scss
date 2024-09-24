@@ -46,6 +46,10 @@
   &:hover .indicator {
     transform: scale(1);
   }
+
+  &:last-child {
+    display: none;
+  }
 }
 
 .logo {
