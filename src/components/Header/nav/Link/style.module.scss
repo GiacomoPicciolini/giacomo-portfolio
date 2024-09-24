@@ -1,14 +1,12 @@
-.link{
-    position: relative;
-    display: flex;
-    align-items: center;
-    
-    .indicator{
-        width: 10px;
-        height: 10px;
-        background-color: white;
-        border-radius: 50%;
-        position: absolute;
-        left: -30px;
-    }
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.link:last-child {
+  border-bottom: 0;
 }

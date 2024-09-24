@@ -10,19 +10,22 @@ import Rounded from '../../common/RoundedButton';
 const projects = [
   {
     title: "Pilatus Aircraft",
-    subtitle: "VR Design / Web Design",
+    subtitle1: "UX/UI - Design System",
+    subtitle2: "VR Design / Web Design",
     src: "/Pilatus/Pilatus/MPS-MOCKUP.jpg",
     color: "#000000"
   },
   {
     title: "Sharely",
-    subtitle: "Desktop / Mobile App",
+    subtitle1: "UX/UI - Design System",
+    subtitle2: "Desktop / Mobile App",
     src: "/Sharely/Sharely/thumbnail_sharely1.jpg",
     color: "#8C8C8C"
   },
   {
     title: "Sky Television",
-    subtitle: "OTT App / Mobile App",
+    subtitle1: "UX/UI - Design System",
+    subtitle2: "OTT App / Mobile App",
     src: "/Sky/Sky/sky2.jpg",
     color: "#EFE8D3"
   }
@@ -79,7 +82,7 @@ export default function Home() {
       <div className={styles.body}>
         {
           projects.map((project, index) => {
-            return <Project index={index} title={project.title} subtitle={project.subtitle} manageModal={manageModal} key={index} />
+            return <Project index={index} title={project.title} subtitle1={project.subtitle1} subtitle2={project.subtitle2} manageModal={manageModal} key={index} />
           })
         }
       </div>

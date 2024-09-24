@@ -60,12 +60,13 @@ export default function index() {
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
+                    <Magnetic>
+                        <div className={styles.el} onClick={() => setIsActive(!isActive)}>
+                            <a>02/MENU</a>
+                            <div className={styles.indicator}></div>
+                        </div>
+                    </Magnetic>
                 </div>
-            </div>
-            <div ref={button} className={styles.headerButtonContainer}>
-                <Rounded onClick={() => { setIsActive(!isActive) }} className={`${styles.button}`}>
-                    <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
-                </Rounded>
             </div>
             <AnimatePresence mode="wait">
                 {isActive && <Nav />}

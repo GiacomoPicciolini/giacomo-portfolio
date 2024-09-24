@@ -9,20 +9,28 @@ import Footer from './Footer';
 
 const navItems = [
   {
-    title: "Home",
+    title: "Hey",
     href: "/",
   },
   {
-    title: "Work",
-    href: "/work",
+    title: "Pilatus Aircraft",
+    href: "/experiences/pilatus",
+  },
+  {
+    title: "Sharely",
+    href: "/experiences/sharely",
+  },
+  {
+    title: "Sky Television",
+    href: "/experiences/sky",
   },
   {
     title: "About",
-    href: "/about",
+    href: "/#about",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "/#contact",
   },
 ]
 
@@ -32,32 +40,28 @@ export default function index() {
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
 
   return (
-    <motion.div 
-      variants={menuSlide} 
-      initial="initial" 
-      animate="enter" 
-      exit="exit" 
+    <motion.div
+      variants={menuSlide}
+      initial="initial"
+      animate="enter"
+      exit="exit"
       className={styles.menu}
-      >
-       <div className={styles.body}>
-            <div onMouseLeave={() => {setSelectedIndicator(pathname)}} className={styles.nav}>
-                    <div className={styles.header}>
-                        <p>Navigation</p>
-                    </div>
-                    {
-                      navItems.map( (data, index) => {
-                        return <Link 
-                        key={index} 
-                        data={{...data, index}} 
-                        isActive={selectedIndicator == data.href} 
-                        setSelectedIndicator={setSelectedIndicator}>
-                        </Link>
-                      })
-                    }
-            </div>
-            <Footer />
+    >
+      <div className={styles.body}>
+        <div onMouseLeave={() => { setSelectedIndicator(pathname) }} className={styles.nav}>
+          {
+            navItems.map((data, index) => {
+              return <Link
+                key={index}
+                data={{ ...data, index }}
+                isActive={selectedIndicator == data.href}
+                setSelectedIndicator={setSelectedIndicator}>
+              </Link>
+            })
+          }
         </div>
-        <Curve />
+      </div>
+      <Curve />
     </motion.div>
   )
 }
