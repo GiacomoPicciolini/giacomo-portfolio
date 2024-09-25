@@ -37,6 +37,7 @@ export default function Home() {
       <Description />
       <Projects />
       <SlidingImages />
+      <Contact />
     </main>
   )
 }
