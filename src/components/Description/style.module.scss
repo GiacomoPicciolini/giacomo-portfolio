@@ -10,6 +10,7 @@
     width: 1400px;
     gap: 50px;
     position: relative;
+
     p {
       &:nth-of-type(1) {
         z-index: 10;
@@ -80,6 +81,58 @@
       height: 266px;
       right: -100px;
       bottom: -100px;
+    }
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+
+    /* Underline effect only for the text */
+    .text {
+      position: relative;
+      padding-bottom: 4px;
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: black;
+        transition: width 0.4s ease-out;
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
+    }
+
+    .firstImage,
+    .secondImage {
+      display: inline-block;
+      transition: transform 0.4s ease-out;
+    }
+
+    /* Initially, the second image is hidden (scaled down to 0) */
+    .secondImage {
+      transform: scale(0);
+    }
+
+    /* On hover, scale down the first image to 0 */
+    &:hover .firstImage {
+      transform: scale(0);
+    }
+
+    /* On hover, scale up the second image from 0 to 1 */
+    &:hover .secondImage {
+      transform: scale(1);
     }
   }
 }

@@ -31,13 +31,18 @@ export default function index() {
                     })}
                 </p>
                 <p>
-                    Currently Designing for
-                    Pilatus Aircraft
+                    Currently Designing
+                    <a href='https://www.pilatus-aircraft.com'>
+                        <span className={styles.firstImage}>
+                            <Image color="black" width={24} height={24} alt="pilatus aircraft" src={"/arrow_forward-black.svg"} />
+                        </span>
+                        <span className={styles.text}>Pilatus Aircraft</span>
+                    </a>
                 </p>
                 <motion.p variants={opacity} animate={isInView ? 'open' : 'closed'}>
                     I was born in Bologna, Italy, in 1992. <br />
                     <br />
-                    I started working in my hometown, Bologna, with <b>university internships</b>
+                    I started working in my hometown, Bologna, with <b>university internships </b>
                     and afterwards in a <b>design agency, LeadSpot,</b> where I spent about 3
                     years, meanwhile completing my <b>Master&apos;s degree in Communication
                         of New Media and UX.</b><br />

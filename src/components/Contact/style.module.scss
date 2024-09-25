@@ -6,21 +6,26 @@
   flex-shrink: 0;
   position: relative;
   background: #000;
+
   .body {
     padding-top: 5%;
     width: 100%;
+
     .title {
       padding-bottom: 5%;
       margin-left: 5%;
       margin-right: 5%;
       position: relative;
+
       span {
         display: flex;
         align-items: center;
+
         h2 {
           margin-left: 0.3em;
         }
       }
+
       h2 {
         color: #f5f5f5;
         font-size: clamp(64px, 10vw, 128px);
@@ -28,18 +33,21 @@
         font-weight: 700;
         line-height: normal;
       }
+
       svg {
         position: absolute;
         top: 30%;
         left: 100%;
       }
     }
+
     .nav {
       display: flex;
       gap: 20%;
       margin: 2%;
       color: #f5f5f5;
       justify-content: end;
+
       a {
         color: white;
         text-decoration: none;
@@ -52,12 +60,56 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        position: relative;
+
+        /* Underline effect only for the text */
+        .text {
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: width 0.4s ease-out;
+          }
+
+          &:hover:before {
+            width: 100%;
+          }
+        }
+
+        .firstImage,
+        .secondImage {
+          fill: white;
+          stroke: white;
+          display: inline-block;
+          transition: transform 0.4s ease-out;
+        }
+
+        /* Initially, the second image is hidden (scaled down to 0) */
+        .secondImage {
+          transform: scale(0);
+        }
+
+        /* On hover, scale down the first image to 0 */
+        &:hover .firstImage {
+          transform: scale(0);
+        }
+
+        /* On hover, scale up the second image from 0 to 1 */
+        &:hover .secondImage {
+          transform: scale(1);
+        }
       }
 
       @media (max-width: 900px) {
         flex-direction: column;
         justify-content: start;
         align-items: start;
+
         a {
           margin: 12px;
         }

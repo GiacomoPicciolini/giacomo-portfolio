@@ -16,8 +16,24 @@ export default function index() {
                     <h2>Get in Touch?</h2>
                 </div>
                 <div className={styles.nav}>
-                    <a href='tel:+41 76 512 59 32'><Image width={24} height={24} alt="Open" src={"/arrow_forward.svg"} />+41 76 512 59 32<Image width={24} height={24} alt="Open" src={"/arrow_forward.svg"} /></a>
-                    <a href='mailto:giacomo.picciolini3@gmail.com'><Image width={24} height={24} alt="Open" src={"/arrow_forward.svg"} />giacomo.picciolini3@gmail.com<Image width={24} height={24} alt="Open" src={"/arrow_forward.svg"} /></a>
+                    <a href='tel:+41 76 512 59 32'>
+                        <span className={styles.firstImage}>
+                            <Image color="white" width={24} height={24} alt="Tel" src={"/arrow_forward.svg"} />
+                        </span>
+                        <span className={styles.text}>+41 76 512 59 32</span>
+                        <span className={styles.secondImage}>
+                            <Image color="white" width={24} height={24} alt="Tel" src={"/arrow_forward.svg"} />
+                        </span>
+                    </a>
+                    <a href='mailto:giacomo.picciolini3@gmail.com'>
+                        <span className={styles.firstImage}>
+                            <Image color="white" width={24} height={24} alt="Email" src={"/arrow_forward.svg"} />
+                        </span>
+                        <span className={styles.text}>giacomo.picciolini3@gmail.com</span>
+                        <span className={styles.secondImage}>
+                            <Image color="white" width={24} height={24} alt="Email" src={"/arrow_forward.svg"} />
+                        </span>
+                    </a>
                 </div>
             </div>
         </motion.div>
