@@ -63,7 +63,7 @@ export default function index() {
                     </Magnetic>
                     <Magnetic>
                         <div className={styles.el} onClick={() => setIsActive(!isActive)}>
-                            <a>02/MENU</a>
+                            <a>02/MENU </a>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
