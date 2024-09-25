@@ -6,6 +6,7 @@ import { menuSlide } from '../animation';
 import Link from './Link';
 import Curve from './Curve';
 import Footer from './Footer';
+import Image from 'next/image';
 
 const navItems = [
   {
@@ -34,7 +35,7 @@ const navItems = [
   },
 ]
 
-export default function index() {
+export default function index({ setIsActive }) {
 
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
@@ -48,6 +49,17 @@ export default function index() {
       className={styles.menu}
     >
       <div className={styles.body}>
+        <div className={styles.closebuttonContainer} onClick={() => setIsActive(false)}>
+          <div className={`${styles.closebutton}`}>
+            <Image
+              priority
+              src="/close.svg"
+              height={24}
+              width={24}
+              alt="Close"
+            />
+          </div>
+        </div>
         <div onMouseLeave={() => { setSelectedIndicator(pathname) }} className={styles.nav}>
           {
             navItems.map((data, index) => {

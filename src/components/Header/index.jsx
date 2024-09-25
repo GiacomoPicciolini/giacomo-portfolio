@@ -8,6 +8,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
+import Image from 'next/image';
 
 export default function index() {
     const header = useRef(null);
@@ -69,7 +70,7 @@ export default function index() {
                 </div>
             </div>
             <AnimatePresence mode="wait">
-                {isActive && <Nav />}
+                {isActive && <Nav setIsActive={setIsActive} />}
             </AnimatePresence>
         </>
     );
