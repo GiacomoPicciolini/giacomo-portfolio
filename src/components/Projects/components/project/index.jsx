@@ -9,10 +9,8 @@ export default function index({ index, title, manageModal, subtitle1, subtitle2 
             className={styles.project}
         >
             <h2>{title}</h2>
-            <div className={styles.subtitleContainer}>
-                <p>{subtitle1}</p>
-                <p>{subtitle2}</p>
-            </div>
+            <p>{subtitle1}</p>
+            <p>{subtitle2}</p>
         </div>
     );
 }
