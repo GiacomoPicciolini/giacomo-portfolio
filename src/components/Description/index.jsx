@@ -51,7 +51,7 @@ export default function index() {
                     the best technologies the market has to offer, such as VR, and Flight
                     Simulators.
                 </motion.p>
-                <div data-scroll data-scroll-speed={0.1}>
+                <div>
                     <div className={styles.imageContainer}></div>
                 </div>
             </div >
