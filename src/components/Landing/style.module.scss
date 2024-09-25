@@ -1,7 +1,7 @@
 .landing {
   position: relative;
   display: flex;
-  height: 100vh;
+  height: 120vh;
   overflow: hidden;
 
   img {
@@ -10,7 +10,7 @@
 
   .sliderContainer {
     position: absolute;
-    top: calc(100vh - 350px);
+    top: calc(100vh - 250px);
   }
 
   .slider {
@@ -22,7 +22,7 @@
     position: relative;
     margin: 0px;
     color: #111;
-    font-size: 230px;
+    font-size: 400px;
     font-weight: 900;
     padding-right: 50px;
   }
@@ -35,66 +35,29 @@
 
   .description {
     position: absolute;
-    top: 15%;
-    left: 45%;
-    color: #111;
-    font-size: 38px;
-    font-weight: 400;
-    font-style: italic;
-
-    p {
-      margin: 0px;
-      margin-bottom: 10px;
-    }
-
-    svg {
-      transform: scale(2);
-      margin-bottom: 100px;
-    }
+    right: 0;
+    top: 20vh;
+    justify-items: end;
+    color: #000;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 859px;
+    text-wrap: balance;
   }
 
-  /* For large desktops */
-  @media (min-width: 1200px) {
+  /* For screens under 900px */
+  @media (max-width: 900px) {
     .description {
-      font-size: 38px;
-      top: 15%;
-      left: 45%;
-    }
-  }
-
-  /* For smaller desktops and laptops */
-  @media (max-width: 1199px) and (min-width: 992px) {
-    .description {
-      font-size: 34px;
-      top: 18%;
-      left: 40%;
-    }
-  }
-
-  /* For tablets */
-  @media (max-width: 991px) and (min-width: 768px) {
-    .description {
-      font-size: 28px;
-      top: 20%;
-      left: 35%;
-    }
-  }
-
-  /* For mobile devices */
-  @media (max-width: 767px) and (min-width: 576px) {
-    .description {
-      font-size: 24px;
-      top: 15%;
-      left: 20%;
-    }
-  }
-
-  /* For small mobile devices */
-  @media (max-width: 575px) {
-    .description {
-      font-size: 20px;
-      top: 10%;
-      left: 10%;
+      position: relative;
+      display: flex;
+      justify-content: center; /* Horizontally centers the content */
+      max-width: 378px;
+      font-size: 40px;
+      margin: 0 auto; /* Center the description container itself */
     }
   }
 }

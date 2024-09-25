@@ -11,7 +11,7 @@ import Contact from '../components/Contact';
 
 export default function Home() {
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     (
