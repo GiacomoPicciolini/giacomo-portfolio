@@ -8,6 +8,7 @@ import Image from 'next/image';
 export default function index() {
     const phrase =
         'I am poised to bring a strategic and user-focused approach to all the projects, contributing to the success and innovation of the final products.';
+
     const description = useRef(null);
     const isInView = useInView(description);
     return (
@@ -28,6 +29,10 @@ export default function index() {
                             </span>
                         );
                     })}
+                </p>
+                <p>
+                    Currently Designing for
+                    Pilatus Aircraft
                 </p>
                 <motion.p variants={opacity} animate={isInView ? 'open' : 'closed'}>
                     I was born in Bologna, Italy, in 1992. <br />

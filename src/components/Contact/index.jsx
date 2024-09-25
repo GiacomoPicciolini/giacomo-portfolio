@@ -16,8 +16,8 @@ export default function index() {
                     <h2>Get in Touch?</h2>
                 </div>
                 <div className={styles.nav}>
-                    <a href='tel:+41 76 512 59 32'><Image width={24} height={24} alt="Open" src={"/arrow_forward.svg"} />+41 76 512 59 32</a>
-                    <a href='mailto:giacomo.picciolini3@gmail.com'><Image width={24} height={24} alt="Open" src={"/arrow_forward.svg"} />giacomo.picciolini3@gmail.com</a>
+                    <a href='tel:+41 76 512 59 32'><Image width={24} height={24} alt="Open" src={"/arrow_forward.svg"} />+41 76 512 59 32<Image width={24} height={24} alt="Open" src={"/arrow_forward.svg"} /></a>
+                    <a href='mailto:giacomo.picciolini3@gmail.com'><Image width={24} height={24} alt="Open" src={"/arrow_forward.svg"} />giacomo.picciolini3@gmail.com<Image width={24} height={24} alt="Open" src={"/arrow_forward.svg"} /></a>
                 </div>
             </div>
         </motion.div>
