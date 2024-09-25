@@ -52,9 +52,7 @@ export default function index() {
                     Simulators.
                 </motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
-                    <div className={styles.imageContainer}>
-                        <Image fill={true} alt={'image'} src={`/person.jpeg`} />
-                    </div>
+                    <div className={styles.imageContainer}></div>
                 </div>
             </div >
         </div >
