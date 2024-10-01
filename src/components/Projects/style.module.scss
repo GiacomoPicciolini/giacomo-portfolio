@@ -11,6 +11,30 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    div {
+      transition: opacity 0.3s ease; // Add a smooth transition to opacity
+    }
+
+    // On hover of one project
+    div:hover {
+      opacity: 1; // Ensure the hovered project stays fully visible
+    }
+
+    // Decrease the opacity of other projects when one is hovered
+    div:hover ~ div {
+      opacity: 0.3; // Adjust the opacity as needed for other projects
+    }
+
+    // Target all .project elements when one is hovered
+    &:hover {
+      div {
+        opacity: 0.3; // Default opacity for all projects when one is hovered
+      }
+      div:hover {
+        opacity: 1; // Full opacity for the hovered project
+      }
+    }
   }
 
   .modalContainer {
@@ -43,26 +67,5 @@
 
   .modal img {
     height: auto;
-  }
-
-  .cursor,
-  .cursorLabel {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #455ce9;
-    color: white;
-    position: fixed;
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 300;
-    pointer-events: none;
-  }
-
-  .cursorLabel {
-    background-color: transparent;
   }
 }
