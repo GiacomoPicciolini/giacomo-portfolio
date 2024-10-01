@@ -7,7 +7,6 @@ import Landing from '../components/Landing';
 import Projects from '../components/Projects';
 import Description from '../components/Description';
 import Contact from '../components/Contact';
-import Cursor from '../components/Cursor'
 
 export default function Home() {
 
