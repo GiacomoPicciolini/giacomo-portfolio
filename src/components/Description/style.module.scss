@@ -1,12 +1,13 @@
 .description {
   display: flex;
   justify-content: center;
-  height: 120vh;
+  height: 100vh;
   @media (max-width: 900px) {
     margin-bottom: 30vh;
   }
   .body {
-    margin: 5vw;
+    margin: 4vw;
+    margin-top: 16vh;
     width: 1400px;
     gap: 50px;
     position: relative;
