@@ -37,6 +37,9 @@ export default function index() {
                             <Image color="black" width={24} height={24} alt="pilatus aircraft" src={"/arrow_forward-black.svg"} />
                         </span>
                         <span className={styles.text}>Pilatus Aircraft</span>
+                        <span className={styles.secondImage}>
+                            <Image color="black" width={24} height={24} alt="pilatus aircraft" src={"/arrow_forward-black.svg"} />
+                        </span>
                     </a>
                 </p>
                 <motion.p variants={opacity} animate={isInView ? 'open' : 'closed'}>

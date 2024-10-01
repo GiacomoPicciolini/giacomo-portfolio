@@ -1,7 +1,7 @@
 .description {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 120vh;
   @media (max-width: 900px) {
     margin-bottom: 30vh;
   }
@@ -15,7 +15,7 @@
     p {
       &:nth-of-type(1) {
         z-index: 10;
-        max-width: 506px;
+        max-width: 50%;
         color: #000;
         font-size: 24px;
         font-style: normal;
@@ -28,6 +28,9 @@
           position: relative;
           overflow: hidden;
           display: inline-flex;
+        }
+        @media (max-width: 900px) {
+          max-width: 100%;
         }
       }
       &:nth-of-type(2) {
@@ -54,9 +57,12 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        max-width: 404px;
+        max-width: 50%;
         b {
           font-weight: 800;
+        }
+        @media (max-width: 900px) {
+          max-width: 100%;
         }
       }
     }

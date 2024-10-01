@@ -60,7 +60,6 @@ export default function Home() {
       <div data-scroll data-scroll-speed={0.1} className={styles.description}>
         <div>
           <p>Simple solutions require Complex Processes. </p>
-          <p>I’m a UX/UI designer based in Luzern.</p>
           <p>These are the latest projects that speak most about me.</p>
         </div>
       </div>
