@@ -128,7 +128,7 @@ body {
   overflow: hidden; /* Hide scrollbars */
   cursor: wait;
   font-family: Barlow;
-  background: none; /* Remove background image from the body directly */
+  background: #e7e6df; /* Remove background image from the body directly */
   position: relative; /* Ensure relative positioning for the pseudo-element */
   text-wrap: balance;
 }
@@ -141,10 +141,9 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('/BG/BG/Background.jpg');
-  background-size: cover;
-  background-position: center;
+  opacity: 0.3;
+  background: url('/BG/BG/Background.jpg') lightgray 50% / cover no-repeat;
+  mix-blend-mode: multiply;
   opacity: 0.2; /* Adjust opacity */
   z-index: -1; /* Ensure the image stays behind all content */
-  mix-blend-mode: multiply; /* Apply the multiply effect */
 }
