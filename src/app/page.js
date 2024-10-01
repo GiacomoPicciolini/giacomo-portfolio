@@ -32,6 +32,7 @@ export default function Home() {
       <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
       </AnimatePresence>
+      <GradientCursor />
       <Landing />
       <Description />
       <Projects />
