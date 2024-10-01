@@ -10,7 +10,7 @@
 
   .sliderContainer {
     position: absolute;
-    top: calc(100vh - 350px);
+    top: calc(100vh - 500px);
   }
 
   .slider {
@@ -36,7 +36,7 @@
   .description {
     position: absolute;
     right: 0;
-    top: 20vh;
+    top: 8vh;
     justify-items: end;
     color: #000;
     -webkit-text-stroke-width: 1;
