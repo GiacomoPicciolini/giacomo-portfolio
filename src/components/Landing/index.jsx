@@ -10,6 +10,7 @@ import { motion } from 'framer-motion';
 export default function Home() {
 
   const firstText = useRef(null);
+  const imgText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
   let xPercent = 0;
@@ -47,8 +48,13 @@ export default function Home() {
     <motion.main variants={slideUp} initial="initial" animate="enter" className={styles.landing}>
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>LATEST WORK</p>
-          <p ref={secondText}>LATEST WORK</p>
+          <p ref={firstText}>
+            LATEST WORK
+            <Image ref={imgText} width={522} height={286} src={"/Pilatus/Pilatus/VR_ok.jpg"} alt="VR" />
+          </p>
+          <p ref={secondText}>LATEST WORK
+            <Image ref={imgText} width={522} height={286} src={"/Pilatus/Pilatus/VR_ok.jpg"} alt="VR" />
+          </p>
         </div>
       </div>
       <div data-scroll data-scroll-speed={0.1} className={styles.description}>

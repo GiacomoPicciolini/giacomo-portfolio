@@ -24,7 +24,11 @@
     color: #111;
     font-size: 400px;
     font-weight: 900;
-    padding-right: 50px;
+    padding-right: 56px;
+
+    img {
+      padding-left: 56px;
+    }
   }
 
   .slider p:nth-of-type(2) {
