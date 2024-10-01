@@ -12,21 +12,21 @@ const projects = [
     title: "Pilatus Aircraft",
     subtitle1: "UX/UI - Design System",
     subtitle2: "VR Design / Web Design",
-    src: "/Pilatus/Pilatus/MPS-MOCKUP.jpg",
+    src: "/BG/BG/Pilatus_home.png",
     color: "#000000"
   },
   {
     title: "Sharely",
     subtitle1: "UX/UI - Design System",
     subtitle2: "Desktop / Mobile App",
-    src: "/Sharely/Sharely/thumbnail_sharely1.jpg",
+    src: "/BG/BG/Sharely_home.png",
     color: "#8C8C8C"
   },
   {
     title: "Sky Television",
     subtitle1: "UX/UI - Design System",
     subtitle2: "OTT App / Mobile App",
-    src: "/Sky/Sky/sky2.jpg",
+    src: "/BG/BG/Sky_home.png",
     color: "#EFE8D3"
   }
 ]
