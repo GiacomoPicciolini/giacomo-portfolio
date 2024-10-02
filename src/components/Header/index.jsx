@@ -9,6 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function index() {
     const header = useRef(null);
@@ -39,31 +40,31 @@ export default function index() {
                 <div className={styles.nav}>
                     <Magnetic>
                         <div className={styles.el}>
-                            <a>01/HEY</a>
+                            <Link href={"/#hey"}>01/HEY</Link>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className={styles.el}>
-                            <a>02/ABOUT</a>
+                            <Link href={"/#about"}>02/ABOUT</Link>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className={styles.el}>
-                            <a>03/WORK</a>
+                            <Link href={"/#work"}>03/WORK</Link>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className={styles.el}>
-                            <a>04/CONTACT</a>
+                            <Link href={"/contact"}>04/CONTACT</Link>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className={styles.el} onClick={() => setIsActive(!isActive)}>
-                            <a>02/MENU </a>
+                            <a>02/MENU</a>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>

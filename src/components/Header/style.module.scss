@@ -3,11 +3,9 @@
   display: flex;
   z-index: 1;
   top: 0;
-  color: #111;
   padding: 35px;
   justify-content: center;
   width: 100%;
-  font-weight: 700;
   box-sizing: border-box;
   align-items: center;
 }
@@ -20,6 +18,9 @@
   padding: 0 20px;
   a {
     cursor: pointer;
+    text-decoration: none;
+    font-weight: 700;
+    color: #111;
   }
 }
 

@@ -15,15 +15,15 @@ const navItems = [
   },
   {
     title: "Pilatus Aircraft",
-    href: "/experiences/pilatus",
+    href: "/pilatus",
   },
   {
     title: "Sharely",
-    href: "/experiences/sharely",
+    href: "/sharely",
   },
   {
     title: "Sky Television",
-    href: "/experiences/sky",
+    href: "/sky",
   },
   {
     title: "About",
