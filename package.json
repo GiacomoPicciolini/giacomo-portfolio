@@ -11,6 +11,7 @@
     "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "eslint": "8.45.0",
     "eslint-config-next": "13.4.10",
     "framer-motion": "^10.13.0",
@@ -19,7 +20,7 @@
     "next": "13.4.10",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.64.0"
+    "sass": "^1.78.0"
   },
   "devDependencies": {
     "@types/node": "^20.16.5",

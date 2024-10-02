@@ -125,11 +125,11 @@ table {
 
 body {
   margin: 0px;
-  overflow: hidden; /* Hide scrollbars */
+  overflow: hidden;
   cursor: wait;
   font-family: Barlow;
-  background: #e7e6df; /* Remove background image from the body directly */
-  position: relative; /* Ensure relative positioning for the pseudo-element */
+  background: #e7e6df;
+  position: relative;
   text-wrap: balance;
 }
 

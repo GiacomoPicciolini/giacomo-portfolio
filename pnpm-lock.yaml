@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@studio-freight/lenis':
+        specifier: ^1.0.42
+        version: 1.0.42
       eslint:
         specifier: 8.45.0
         version: 8.45.0
@@ -33,7 +36,7 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       sass:
-        specifier: ^1.64.0
+        specifier: ^1.78.0
         version: 1.78.0
     devDependencies:
       '@types/node':
@@ -217,6 +220,10 @@ packages:
 
   '@rushstack/eslint-patch@1.10.4':
     resolution: {integrity: sha512-WJgX9nzTqknM393q1QJDJmoW28kUfEnybeTfVNcNAPnIx210RXm2DiXiHzfNPJNIUUb1tJnz/l4QGtJ30PgWmA==}
+
+  '@studio-freight/lenis@1.0.42':
+    resolution: {integrity: sha512-HJAGf2DeM+BTvKzHv752z6Z7zy6bA643nZM7W88Ft9tnw2GsJSp6iJ+3cekjyMIWH+cloL2U9X82dKXgdU8kPg==}
+    deprecated: '''@studio-freight/lenis'' has been renamed to just ''lenis'', run ''npx @darkroom.engineering/codemods'' to update your dependecies accordingly.'
 
   '@swc/helpers@0.5.1':
     resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
@@ -1789,6 +1796,8 @@ snapshots:
 
   '@rushstack/eslint-patch@1.10.4': {}
 
+  '@studio-freight/lenis@1.0.42': {}
+
   '@swc/helpers@0.5.1':
     dependencies:
       tslib: 2.7.0
@@ -2241,7 +2250,7 @@ snapshots:
       eslint: 8.45.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@5.62.0(eslint@8.45.0)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.45.0))(eslint@8.45.0)
-      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@5.62.0(eslint@8.45.0)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@5.62.0(eslint@8.45.0)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.45.0))(eslint@8.45.0))(eslint@8.45.0)
+      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@5.62.0(eslint@8.45.0)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.45.0)
       eslint-plugin-jsx-a11y: 6.10.0(eslint@8.45.0)
       eslint-plugin-react: 7.36.0(eslint@8.45.0)
       eslint-plugin-react-hooks: 5.0.0-canary-7118f5dd7-20230705(eslint@8.45.0)
@@ -2276,7 +2285,7 @@ snapshots:
       is-bun-module: 1.2.1
       is-glob: 4.0.3
     optionalDependencies:
-      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@5.62.0(eslint@8.45.0)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@5.62.0(eslint@8.45.0)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.45.0))(eslint@8.45.0))(eslint@8.45.0)
+      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@5.62.0(eslint@8.45.0)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.45.0)
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-node
@@ -2294,7 +2303,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.30.0(@typescript-eslint/parser@5.62.0(eslint@8.45.0)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@5.62.0(eslint@8.45.0)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.45.0))(eslint@8.45.0))(eslint@8.45.0):
+  eslint-plugin-import@2.30.0(@typescript-eslint/parser@5.62.0(eslint@8.45.0)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.45.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8

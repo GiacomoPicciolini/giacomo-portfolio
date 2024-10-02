@@ -7,6 +7,7 @@ import Landing from '../components/Landing';
 import Projects from '../components/Projects';
 import Description from '../components/Description';
 import Contact from '../components/Contact';
+import Cards from '../components/Cards'
 
 export default function Home() {
 
@@ -34,7 +35,7 @@ export default function Home() {
       </AnimatePresence>
       <Landing />
       <Description />
-      <Projects />
+      <Cards />
       <Contact />
     </main>
   )
