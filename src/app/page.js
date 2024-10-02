@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
 import Preloader from '../components/Preloader';
 import Landing from '../components/Landing';
-import Projects from '../components/Projects';
+import Header from '../components/Header'
 import Description from '../components/Description';
 import Contact from '../components/Contact';
 import Cards from '../components/Cards'
@@ -29,14 +29,17 @@ export default function Home() {
   }, [])
 
   return (
-    <main className={styles.main}>
-      <AnimatePresence mode='wait'>
-        {isLoading && <Preloader />}
-      </AnimatePresence>
-      <Landing />
-      <Description />
-      <Cards />
-      <Contact />
-    </main>
+    <>
+      <Header />
+      <main className={styles.main}>
+        <AnimatePresence mode='wait'>
+          {isLoading && <Preloader />}
+        </AnimatePresence>
+        <Landing />
+        <Description />
+        <Cards />
+        <Contact />
+      </main>
+    </>
   )
 }
