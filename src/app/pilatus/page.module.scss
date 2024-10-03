@@ -19,7 +19,7 @@
 }
 
 // Description section
-.descriptionContainer {
+.mainDescriptionContainer {
   display: flex;
   margin: 10rem 4vw;
 
@@ -29,16 +29,27 @@
   }
 }
 
+// Description section
+.doubleDescriptionContainer {
+  display: flex;
+  margin: 10rem 4vw;
+  gap: 21px;
+
+  .secondaryDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
 .label {
   display: flex;
-  width: 158px;
   height: 28px;
   padding-top: 13px;
   padding-right: 20%;
   align-items: center;
   gap: 20px;
   flex-shrink: 0;
-  color: #000;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -46,10 +57,16 @@
 }
 
 .descriptionText {
-  color: #000;
   font-size: clamp(24px, 3vw, 48px);
   font-style: normal;
   font-weight: 600;
+  line-height: normal;
+}
+
+.secondaryDescriptionText {
+  font-size: clamp(12px, 3vw, 24px);
+  font-style: normal;
+  font-weight: 500;
   line-height: normal;
 }
 
@@ -84,7 +101,8 @@
 }
 
 .heading {
-  font-size: 5vw;
+  width: 50vw;
+  font-size: 2vw;
   text-transform: uppercase;
 }
 
