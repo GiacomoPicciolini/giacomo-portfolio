@@ -26,7 +26,7 @@ function Section() {
       <div className={styles.background}>
         <motion.div style={{ y }} className={styles.backgroundImage}>
           <Image
-            src={"/Pilatus/Pilatus/MPS-MOCKUP.jpg"}
+            src={"/Pilatus/Pilatus/sim_ok2.jpg"}
             fill
             alt='image'
             style={{ objectFit: 'cover' }}
@@ -44,13 +44,13 @@ function Intro() {
     offset: ['start start', 'end start'],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ['0vh', '150vh']);
+  const y = useTransform(scrollYProgress, [0, 1], ['-30vh', '150vh']);
 
   return (
     <div className={styles.introContainer}>
       <motion.div style={{ y }} className={styles.introImage}>
         <Image
-          src={"/Pilatus/Pilatus/sim_ok2.jpg"}
+          src={"/Pilatus/Pilatus/MPS-MOCKUP.jpg"}
           fill
           alt='image'
           style={{ objectFit: 'cover' }}
@@ -60,17 +60,8 @@ function Intro() {
   );
 }
 
-function Description() {
-  return (
-    <div className={styles.descriptionContainer}>
-      <p className={styles.descriptionText}>
-        The quick brown fox jumps over the lazy dog
-      </p>
-    </div>
-  );
-}
 
-export default function Contact() {
+export default function Page() {
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -84,9 +75,35 @@ export default function Contact() {
 
   return (
     <main className={styles.main}>
+      <div className={styles.descriptionContainer}>
+        <div className={styles.label}>
+          <Image src={"/radio.svg"} width={24} height={24} alt="dot" />
+          <p>PROJECT</p>
+        </div>
+        <p className={styles.descriptionText}>
+          The GBTS department is dedicated to developing software for pilot and technician training, teaching students how to approach aircraft through the use of theoretical lessons, flight simulators, and augmented reality.
+        </p>
+      </div>
       <Intro />
-      <Description />
+      <div className={styles.descriptionContainer}>
+        <div className={styles.label}>
+          <Image src={"/radio.svg"} width={24} height={24} alt="dot" />
+          <p>PROJECT</p>
+        </div>
+        <p className={styles.descriptionText}>
+          The GBTS department is dedicated to developing software for pilot and technician training, teaching students how to approach aircraft through the use of theoretical lessons, flight simulators, and augmented reality.
+        </p>
+      </div>
       <Section />
+      <div className={styles.descriptionContainer}>
+        <div className={styles.label}>
+          <Image src={"/radio.svg"} width={24} height={24} alt="dot" />
+          <p>PROJECT</p>
+        </div>
+        <p className={styles.descriptionText}>
+          The GBTS department is dedicated to developing software for pilot and technician training, teaching students how to approach aircraft through the use of theoretical lessons, flight simulators, and augmented reality.
+        </p>
+      </div>
     </main>
   );
 }
