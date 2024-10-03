@@ -21,6 +21,7 @@
 .contentWrapper {
   display: flex;
   margin: 10rem 4vw;
+  margin-top: 2rem;
 
   @media (max-width: 900px) {
     flex-direction: column;
@@ -271,5 +272,40 @@
         }
       }
     }
+  }
+}
+
+.closebuttonContainer {
+  left: 0;
+
+  .closebutton {
+    background-color: transparent; /* A light transparent background */
+    border: 2px solid gray;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    backdrop-filter: blur(10px); /* Blurring the background */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+  }
+
+  .closebutton img {
+    fill: white;
+    width: 24;
+    height: 24;
+  }
+
+  .closebutton:hover {
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.2
+    ); /* Slightly increase the transparency on hover */
   }
 }
