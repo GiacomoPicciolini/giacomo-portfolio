@@ -6,6 +6,7 @@ import Image from 'next/image';
 import React from 'react';
 import styles from './page.module.scss';
 import Link from 'next/link';
+import ProjectFooter from './../../components/ProjectFooter/index';
 
 function Section() {
   const container = useRef();
@@ -236,9 +237,7 @@ export default function Page() {
               <img src='/arrow_back.svg' alt="image" />
             </Link>
           </div>
-          <div className={styles.title}>
-            <h2>SHARELY</h2>
-          </div>
+          <ProjectFooter title="SHARELY" />
           <div className={styles.nav}>
             <div></div>
             <a href='#top'>
