@@ -8,7 +8,7 @@
   z-index: 3;
   display: flex;
   flex-direction: column;
-  overflow: scroll;
+  overflow-y: scroll;
 
   .body {
     box-sizing: border-box;
@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: scroll;
+    overflow-y: scroll;
 
     .nav {
       display: flex;
