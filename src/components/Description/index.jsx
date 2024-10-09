@@ -64,9 +64,6 @@ export default function index() {
                     the best technologies the market has to offer, such as VR, and Flight
                     Simulators.
                 </motion.p>
-                <div>
-                    <div className={styles.imageContainer}></div>
-                </div>
             </div >
         </div >
     );
