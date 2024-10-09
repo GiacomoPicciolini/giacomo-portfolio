@@ -31,16 +31,6 @@ export default function index() {
                     })}
                 </p>
                 <p>
-                    Currently Designing
-                    <a href='https://www.pilatus-aircraft.com'>
-                        <span className={styles.firstImage}>
-                            <Image color="black" width={24} height={24} alt="pilatus aircraft" src={"/arrow_forward-black.svg"} />
-                        </span>
-                        <span className={styles.text}>Pilatus Aircraft</span>
-                        <span className={styles.secondImage}>
-                            <Image color="black" width={24} height={24} alt="pilatus aircraft" src={"/arrow_forward-black.svg"} />
-                        </span>
-                    </a>
                 </p>
                 <motion.p variants={opacity} animate={isInView ? 'open' : 'closed'}>
                     I was born in Bologna, Italy, in 1992. <br />
