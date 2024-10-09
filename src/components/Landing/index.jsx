@@ -71,7 +71,7 @@ export default function Home() {
               ref={imgText}
               width={522}
               height={286}
-              src={'/Pilatus/Pilatus/VR_ok.jpg'}
+              src={'/Pilatus/VR_ok.jpg'}
               alt="VR"
             />
           </p>
@@ -81,7 +81,7 @@ export default function Home() {
               ref={imgText}
               width={522}
               height={286}
-              src={'/Pilatus/Pilatus/VR_ok.jpg'}
+              src={'/Pilatus/VR_ok.jpg'}
               alt="VR"
             />
           </p>

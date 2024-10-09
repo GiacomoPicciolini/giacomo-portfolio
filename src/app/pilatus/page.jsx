@@ -9,6 +9,9 @@ import React from 'react';
 import ProjectFooter from './../../components/ProjectFooter/index';
 import styles from './page.module.scss';
 
+import image1 from "../../../public/Pilatus/sim_ok2.jpg"
+import image2 from "../../../public/Pilatus/MPS-MOCKUP.jpg"
+
 const ParallaxSection = ({ backgroundImage }) => {
   const containerRef = useRef();
   const { scrollYProgress } = useScroll({
@@ -21,7 +24,7 @@ const ParallaxSection = ({ backgroundImage }) => {
     <div ref={containerRef} className={styles.parallaxSection}>
       <div className={styles.fixedBackground}>
         <motion.div style={{ y }} className={styles.backgroundImageWrapper}>
-          <Image src={backgroundImage} fill alt="background image" style={{ objectFit: 'cover' }} />
+          <Image src={backgroundImage} priority placeholder="blur" fill alt="background image" style={{ objectFit: 'cover' }} />
         </motion.div>
       </div>
     </div>
@@ -40,7 +43,7 @@ const IntroSection = ({ introImage }) => {
   return (
     <div className={styles.heroSection}>
       <motion.div style={{ y }} className={styles.heroImage}>
-        <Image src={introImage} fill alt="intro image" style={{ objectFit: 'cover' }} />
+        <Image src={introImage} priority placeholder="blur" fill alt="intro image" style={{ objectFit: 'cover' }} />
       </motion.div>
     </div>
   );
@@ -109,7 +112,7 @@ const Page = () => {
         </p>
       </div>
 
-      <IntroSection introImage="/Pilatus/Pilatus/MPS-MOCKUP.jpg" />
+      <IntroSection introImage={image1} />
 
       <div className={styles.multiContentWrapper}>
         <ContentBlock
@@ -129,12 +132,12 @@ const Page = () => {
         />
       </div>
 
-      <ParallaxSection backgroundImage="/Pilatus/Pilatus/sim_ok2.jpg" />
+      <ParallaxSection backgroundImage={image2} />
 
       <ImageWrapper
         images={[
-          { src: "/Pilatus/Pilatus/Simulator.jpg", alt: "simulator image" },
-          { src: "/Pilatus/Pilatus/TMS-IMAGE.jpg", alt: "TMS image" },
+          { src: "/Pilatus/Simulator.jpg", alt: "simulator image" },
+          { src: "/Pilatus/TMS-IMAGE.jpg", alt: "TMS image" },
         ]}
       />
 
@@ -156,8 +159,8 @@ const Page = () => {
 
       <ImageWrapper
         images={[
-          { src: "/Pilatus/Pilatus/VR_ok.jpg", alt: "VR image" },
-          { src: "/Pilatus/Pilatus/Simulator2.jpg", alt: "Simulator image" },
+          { src: "/Pilatus/VR_ok.jpg", alt: "VR image" },
+          { src: "/Pilatus/Simulator2.jpg", alt: "Simulator image" },
         ]}
       />
 
@@ -180,10 +183,10 @@ const Page = () => {
 
       <ImageWrapper
         images={[
-          { src: "/Pilatus/Pilatus/IWB_Mockup.jpg", alt: "Mockup image" },
-          { src: "/Pilatus/Pilatus/GBTS_27ok.jpg", alt: "GBTS image" },
-          { src: "/Pilatus/Pilatus/login_ok.jpg", alt: "Login image" },
-          { src: "/Pilatus/Pilatus/TMS-IMAGE.jpg", alt: "TMS image" },
+          { src: "/Pilatus/IWB_Mockup.jpg", alt: "Mockup image" },
+          { src: "/Pilatus/GBTS_27ok.jpg", alt: "GBTS image" },
+          { src: "/Pilatus/login_ok.jpg", alt: "Login image" },
+          { src: "/Pilatus/TMS-IMAGE.jpg", alt: "TMS image" },
         ]}
       />
 
