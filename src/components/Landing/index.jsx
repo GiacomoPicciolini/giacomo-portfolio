@@ -49,11 +49,6 @@ export default function Home() {
     };
 
     requestAnimationFrame(animate);
-
-    return () => {
-      // Clean up ScrollTrigger and animation on component unmount
-      ScrollTrigger.kill();
-    };
   }, []);
 
   return (

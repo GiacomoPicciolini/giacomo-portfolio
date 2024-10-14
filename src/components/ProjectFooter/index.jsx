@@ -23,7 +23,7 @@ export default function ProjectFooter({ title }) {
         end: window.innerHeight,
         onUpdate: e => direction = e.direction * -1
       },
-      x: "-500px",
+      x: "0",
     })
     requestAnimationFrame(animate);
   }, [])
