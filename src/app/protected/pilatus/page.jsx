@@ -109,7 +109,7 @@ const Page = () => {
   return (
     <main className={styles.container}>
       <Link className={styles.closebuttonContainer} href='/'>
-        <div className={`${styles.closebutton}`}>
+        <div className={styles.closebutton}>
           <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g id="close">
               <g mask="url(#mask0_8_56)">
