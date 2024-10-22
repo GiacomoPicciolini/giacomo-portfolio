@@ -15,11 +15,13 @@
     border-radius: 20px;
     padding: 8vw;
     transform-origin: top;
+    @media (max-width: 900px) {
+      height: 80vh;
+    }
     .body {
       display: flex;
       height: 100%;
       gap: 24px;
-
       .description {
         width: 40%;
         position: relative;
