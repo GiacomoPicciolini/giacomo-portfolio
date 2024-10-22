@@ -14,6 +14,7 @@ const projects = [
         link: '/protected/pilatus',
         color: '#FCFAEE',
         tags: ['UX', 'UI', 'Desktop App', 'VR App', 'Design System'],
+        tagColor: "#EFEFEF"
     },
     {
         title: 'Sky Television',
@@ -23,6 +24,7 @@ const projects = [
         link: '/sky',
         color: '#ECDFCC',
         tags: ['UX', 'UI', 'OTT App', 'Mobile App'],
+        tagColor: "#FBF1B7"
     },
     {
         title: 'Sharely',
@@ -32,6 +34,7 @@ const projects = [
         link: '/sharely',
         color: '#DBDBDB',
         tags: ['UX', 'UI', 'Desktop App', 'Mobile App', 'Design System'],
+        tagColor: "#ECECEC"
     },
 ];
 
