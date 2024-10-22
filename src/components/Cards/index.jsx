@@ -11,7 +11,7 @@ const projects = [
         description:
             'The GBTS department is dedicated to develop software for pilot and technician training, teaching students how to approach aircraft through the use of the best technologies.',
         src: '/BG/BG/Pilatus_home.png',
-        link: '/pilatus',
+        link: '/protected/pilatus',
         color: '#FCFAEE',
         tags: ['UX', 'UI', 'Desktop App', 'VR App', 'Design System'],
     },

@@ -15,7 +15,7 @@ const navItems = [
   },
   {
     title: "Pilatus Aircraft",
-    href: "/pilatus",
+    href: "/protected/pilatus",
   },
   {
     title: "Sharely",
