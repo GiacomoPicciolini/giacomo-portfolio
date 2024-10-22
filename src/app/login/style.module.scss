@@ -173,3 +173,42 @@
     filter: none; /* Remove the blur effect on hover */
   }
 }
+
+/* Base styles remain unchanged */
+
+@media (max-width: 900px) {
+  .body {
+    input {
+      height: 40px; /* Decrease height for inputs */
+      margin-bottom: 20px; /* Reduce margin */
+      font-size: 14px; /* Adjust font size */
+    }
+  }
+
+  .formWrapper {
+    width: 70%; /* Make the form wrapper more narrow */
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .labelText {
+    font-size: 20px; /* Decrease font size for labels */
+    padding-right: 0; /* Remove right padding */
+  }
+
+  .big {
+    font-size: 18px; /* Adjust font size for bigger text */
+  }
+
+  .small {
+    font-size: 10px; /* Adjust font size for smaller text */
+  }
+
+  .warning {
+    font-size: 14px; /* Decrease warning text size */
+    margin-right: 0; /* Reset margin for warnings */
+  }
+
+  .link {
+    font-size: 14px; /* Adjust link text size */
+  }
+}
