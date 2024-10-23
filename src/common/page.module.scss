@@ -134,7 +134,6 @@
 
   .singleDescriptionImage {
     position: relative;
-    height: 50vh;
     width: 100vw;
   }
 
@@ -322,6 +321,17 @@
 
   .closebutton:hover::before {
     filter: none; /* Remove the blur effect on hover */
+  }
+}
+
+
+.ul{
+  padding-left: 40px;
+  font-size: clamp(12px, 3vw, 24px);
+  font-weight: 500;
+  line-height: normal;
+  li{
+    padding-top: 20px;
   }
 }
 

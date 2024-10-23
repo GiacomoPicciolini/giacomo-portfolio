@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import ProjectFooter from '../../../components/ProjectFooter/index';
-import styles from '../../../common/page.module.scss';
+import styles from '../../common/page.module.scss';
 
 import image1 from '../../../../public/Pilatus/sim_ok2.jpg';
 import image2 from '../../../../public/Pilatus/MPS-MOCKUP.jpg';
