@@ -8,6 +8,7 @@ import Link from 'next/link';
 import React from 'react';
 import ProjectFooter from '../../components/ProjectFooter/index';
 import styles from '../../common/page.module.scss';
+import { ContentBlock,ImageWrapper } from '../sharely/page';
 
 import image1 from '../../../public/Pilatus/sim_ok2.jpg';
 import image2 from '../../../public/Pilatus/MPS-MOCKUP.jpg';
@@ -63,38 +64,6 @@ const IntroSection = ({ introImage }) => {
   );
 };
 
-const ContentBlock = ({ label, texts }) => (
-  <div className={styles.secondaryContent}>
-    <div className={styles.labelText}>
-      <Image src={'/radio.svg'} width={24} height={24} alt='dot' />
-      <p>{label}</p>
-    </div>
-    <p className={styles.secondaryText}>
-      {texts.map((text, index) => (
-        <React.Fragment key={index}>
-          {text}
-          <br />
-          <br />
-        </React.Fragment>
-      ))}
-    </p>
-  </div>
-);
-
-const ImageWrapper = ({ images }) => (
-  <div className={styles.imageWrapper}>
-    {images.map((image, index) => (
-      <div key={index} className={styles.doubleDescriptionImage}>
-        <Image
-          src={image.src}
-          fill
-          alt={image.alt}
-          style={{ objectFit: 'cover' }}
-        />
-      </div>
-    ))}
-  </div>
-);
 
 const Page = () => {
   useEffect(() => {
@@ -126,10 +95,7 @@ const Page = () => {
           <p>PROJECT</p>
         </div>
         <p className={styles.primaryText}>
-          The GBTS department is dedicated to developing software for pilot and
-          technician training, teaching students how to approach aircraft
-          through the use of theoretical lessons, flight simulators, and
-          augmented reality.
+          Improving Sky Go App functionalities and rewrite experience on Sky Q and Sky On Demand
         </p>
       </div>
 
@@ -139,19 +105,23 @@ const Page = () => {
         <ContentBlock
           label='OVERVIEW'
           texts={[
-            'Just as in any other field, the military aviation sector has felt the need to innovate to keep up with the times, and Pilatus has decided to seize the opportunity.',
-            'At the beginning of 2022, the "Common Platform" project was launched, aimed at creating new teaching tools based on the latest technologies, improving and integrating established products.',
+            'Sky Television Broadcast was initially established as a pan-European private television network, gradually becoming a market leader over the years. However, it expanded its offerings over time by providing streaming services and apps for various platforms. This expansion has made the content consumption experience increasingly engaging and up-to-date for its subscribers, keeping pace with evolving trends.',
+            'Before fully diving into my role as a UX/UI Designer, I had the opportunity to briefly join the Graphic Design Team to fully understand the rhythms, organization, and environment I was in. ',
           ]}
         />
         <ContentBlock
-          label='CHALLENGES AND GOALS'
+          label=''
           texts={[
-            'The ultimate goal is to develop a wide range of products that fully cover every aspect of Training Academy instruction.',
-            'Theoretical lessons, based on images and 3D aircraft models, VR and XR familiarization devices, mission planning and debriefing tools, full-flight simulators.',
-            'The real goal was to create this set of products, interconnecting them through a centralized management system. This system, called Academy TMS, not only collects and analyzes data but also schedules the academic year and manages content, training assets, and users.',
+            'After completing this short experience and having learned what it means to work in a 24-hour on-air television environment, I began working on the UX/UI of various apps provided by Sky to its customers: Sky Go and Sky On Demand.',
           ]}
         />
       </div>
+      <div className={styles.titleContentWrapper}>
+        <h3>
+          &quot;Having had the opportunity to work in different roles has teached me how to communicate clearly and effectively, placing a strong emphasis on data visualization and visual clarity in the message&quot;
+        </h3>
+      </div>
+
 
       <ParallaxSection backgroundImage={image2} />
 
@@ -165,26 +135,20 @@ const Page = () => {
       <div className={styles.singleContentWrapper}>
         <div className={styles.labelText}>
           <Image src={'/radio.svg'} width={24} height={24} alt='dot' />
-          <p>OVERVIEW</p>
+          <p>CHALLENGES AND GOALS</p>
         </div>
-        <p className={styles.secondaryText}>
-          In collaboration with other Design Teams, we built the company’s first
-          Design System.
+        <div className={styles.secondaryText}>
+          <h4>Identifying the differences</h4>
+          <p>Although both Sky Go and Sky On Demand are two applications, they are used on completely different platforms: the former on mobile devices, the latter is an OTT app, used directly on television. The goal of the team was to conduct tests trying to understand where to unify the products experience and where to differentiate them.</p>
           <br />
           <br />
-          My first Goal was to analyze how to incorporate Design discipline into
-          an already well-defined development process, with a V-Based approach,
-          and established work phases that include System Engineers, Project
-          Managers, and V&V.
+          <h4>Expanding the user base</h4>
+          <p>Sky was certainly among the first companies to launch streaming apps, but it later had to contend with new platforms taking over the market. One of the objectives was, by analyzing user requests and comparing them with the latest trends and choices of various competitors, to understand which new features to develop to make the experience increasingly satisfying.</p>
           <br />
           <br />
-          We used the Google Design Sprint methodology, tailoring the process to
-          fit our needs and expectations, as a baseline to create our own design
-          process. Introducing workshops, User Research, and collaborating with
-          other departments, we were able to fit Design into the Pilatus
-          Lifecycle, seeing immediate results and improvements in the products
-          under development.
-        </p>
+          <h4>Understanding the User</h4>
+          <p>Coming from a television background, user research has always been fundamental for the company. From the outset, I had the opportunity to be in close contact with a large portion of Sky subscribers to conduct product tests with a perfectly profiled audience.</p>
+        </div>
       </div>
 
       <ImageWrapper
@@ -197,82 +161,42 @@ const Page = () => {
       <div className={styles.singleContentWrapper}>
         <div className={styles.labelText}>
           <Image src={'/radio.svg'} width={24} height={24} alt='dot' />
-          <p>THE DESIGN</p>
+          <p>THE TAKEAWAY</p>
         </div>
         <p className={styles.secondaryText}>
-          I have designed the UX and UI of 3 completely new products: Academy
-          TMS, Interactive Wallboards, and Familiarization Learning CBT.
-          <br />
-          <br />
-          Besides that, a full redesign of existing products like Mission
-          Planner and Debrief, and Computer Based Training, was completed to
-          visually unify them and add new features and functionalities that
-          allowed an exchange of data and full integration.
-          <br />
-          <br />
-          Thanks to user research, I tackled complicated topics such as design
-          for VR, and learned how end users could influence design choices. The
-          research and testing allowed us to simplify the User Journey as much
-          as possible in very complicated management software, used by many
-          Aviation Academies worldwide.
+          This experience has been truly formative for several reasons. During my time at Sky, we launched new features, created new sections in our apps, and improved the usability of different functionalities based on the feedback we received. <br /><br />
+          The most significant part of my work, has been done on the redesign of the User Experience of the Log In and onboarding process of the App, making it accessible from different platforms and simplifiyng the whole journey, reducing time and effort.<br /><br />
+          However, in this case, I believe it is more appropriate to focus on the various skills acquired rather than on the data.<br /><br />
+          It taught me the dynamics of a multinational corporation, how to work and collaborate within a large company.<br /><br />
+          It introduced me to a new method of design, where data visualization is at the heart of the project.<br /><br />
+          It taught me different testing methodologies and helped me understand that without a solid foundation of study and analysis, it is impossible to satisfy the end user.<br /><br />
         </p>
       </div>
 
       <ImageWrapper
         images={[
-          { src: '/Pilatus/IWB_Mockup.jpg', alt: 'Mockup image' },
-          { src: '/Pilatus/GBTS_27ok.jpg', alt: 'GBTS image' },
-          { src: '/Pilatus/login_ok.jpg', alt: 'Login image' },
-          { src: '/Pilatus/TMS-IMAGE.jpg', alt: 'TMS image' },
+          { src: '/Sky/skygook.jpg', alt: 'VR image' },
         ]}
       />
-
-      <div className={styles.singleContentWrapper}>
-        <div className={styles.labelText}>
-          <Image src={'/radio.svg'} width={24} height={24} alt='dot' />
-          <p>THE TAKEAWAY</p>
-        </div>
-        <p className={styles.secondaryText}>
-          Through the design of new products, we have managed to increase the
-          satisfaction rate of current customers, extending existing contracts
-          and signing deals with 3 new Training Academies.
-          <br />
-          <br />
-          Working with focus groups and surveys, we confirmed how product
-          usability has increased exponentially and how the Pilatus brand is now
-          universally recognized across all its products.
-          <br />
-          <br />
-          The biggest challenge was to introduce design discipline in a strongly
-          established engineers/aviation environment, educating people to a new
-          perspective based on agile methods, user-centered design, and
-          iterative approaches.
-          <br />
-          <br />
-          This experience taught me how to find creative solutions to problems
-          often unique to design projects, such as technical limitations of an
-          app or the inability to use common User Research methodologies.
-        </p>
-      </div>
 
       <div className={styles.contact}>
         <div className={styles.body}>
           <div className={styles.nav}>
             <div className={styles.projects}>
-              <Link href='/sharely'>Next Project</Link>
+              <Link href='/protected/pilatus'>Next Project</Link>
             </div>
-            <Link href='/sharely' className={styles.next}>
-              <span>Sharely</span>
+            <Link href='/protected/pilatus' className={styles.next}>
+              <span>Pilatus</span>
               <img src='/arrow_forward_2.svg' alt='Next' />
             </Link>
           </div>
           <div className={styles.nav}>
             <div></div>
-            <Link href='/sky' className={styles.next}>
+            <Link href='/sharely' className={styles.next}>
               <img src='/arrow_back.svg' alt='Previous' />
             </Link>
           </div>
-          <ProjectFooter title='SHARELY' />
+          <ProjectFooter title='PILATUS' />
           <div className={styles.nav}>
             <div></div>
             <a href='#top'>
@@ -281,7 +205,7 @@ const Page = () => {
                   width={24}
                   height={24}
                   alt='Back to top'
-                  src={'/arrow_forward.svg'}
+                  src={'/arrow_up.svg'}
                 />
               </span>
               <span className={styles.text}>Back on top</span>
@@ -290,7 +214,7 @@ const Page = () => {
                   width={24}
                   height={24}
                   alt='Back to top'
-                  src={'/arrow_forward.svg'}
+                  src={'/arrow_up.svg'}
                 />
               </span>
             </a>

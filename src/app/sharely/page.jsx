@@ -63,7 +63,7 @@ const IntroSection = ({ introImage }) => {
   );
 };
 
-const ContentBlock = ({ label, texts }) => (
+export const ContentBlock = ({ label, texts }) => (
   <div className={styles.secondaryContent}>
     <div className={styles.labelText}>
       {label != "" ? <Image src={'/radio.svg'} width={24} height={24} alt='dot' /> : <></>}
@@ -82,7 +82,7 @@ const ContentBlock = ({ label, texts }) => (
   </div>
 );
 
-const ImageWrapper = ({ images }) => (
+export const ImageWrapper = ({ images }) => (
   <div className={styles.imageWrapper}>
     {images.map((image, index) => (
       <div key={index} className={images.length  === 1 ? styles.singleDescriptionImage : styles.doubleDescriptionImage}>
@@ -241,7 +241,7 @@ const Page = () => {
           </div>
           <div className={styles.nav}>
             <div></div>
-            <Link href='/pilatus' className={styles.next}>
+            <Link href='/protected/pilatus' className={styles.next}>
               <img src='/arrow_back.svg' alt='Previous' />
             </Link>
           </div>
@@ -254,7 +254,7 @@ const Page = () => {
                   width={24}
                   height={24}
                   alt='Back to top'
-                  src={'/arrow_forward.svg'}
+                  src={'/arrow_up.svg'}
                 />
               </span>
               <span className={styles.text}>Back on top</span>
@@ -263,7 +263,7 @@ const Page = () => {
                   width={24}
                   height={24}
                   alt='Back to top'
-                  src={'/arrow_forward.svg'}
+                  src={'/arrow_up.svg'}
                 />
               </span>
             </a>

@@ -9,6 +9,8 @@ import React from 'react';
 import ProjectFooter from '../../../components/ProjectFooter/index';
 import styles from '../../../common/page.module.scss';
 
+import { ContentBlock, ImageWrapper } from '../../sharely/page'
+
 import image1 from '../../../../public/Pilatus/sim_ok2.jpg';
 import image2 from '../../../../public/Pilatus/MPS-MOCKUP.jpg';
 
@@ -62,39 +64,6 @@ const IntroSection = ({ introImage }) => {
     </div>
   );
 };
-
-const ContentBlock = ({ label, texts }) => (
-  <div className={styles.secondaryContent}>
-    <div className={styles.labelText}>
-      <Image src={'/radio.svg'} width={24} height={24} alt='dot' />
-      <p>{label}</p>
-    </div>
-    <p className={styles.secondaryText}>
-      {texts.map((text, index) => (
-        <React.Fragment key={index}>
-          {text}
-          <br />
-          <br />
-        </React.Fragment>
-      ))}
-    </p>
-  </div>
-);
-
-const ImageWrapper = ({ images }) => (
-  <div className={styles.imageWrapper}>
-    {images.map((image, index) => (
-      <div key={index} className={styles.doubleDescriptionImage}>
-        <Image
-          src={image.src}
-          fill
-          alt={image.alt}
-          style={{ objectFit: 'cover' }}
-        />
-      </div>
-    ))}
-  </div>
-);
 
 const Page = () => {
   useEffect(() => {
@@ -281,7 +250,7 @@ const Page = () => {
                   width={24}
                   height={24}
                   alt='Back to top'
-                  src={'/arrow_forward.svg'}
+                  src={'/arrow_upsvg'}
                 />
               </span>
               <span className={styles.text}>Back on top</span>
@@ -290,7 +259,7 @@ const Page = () => {
                   width={24}
                   height={24}
                   alt='Back to top'
-                  src={'/arrow_forward.svg'}
+                  src={'/arrow_up.svg'}
                 />
               </span>
             </a>

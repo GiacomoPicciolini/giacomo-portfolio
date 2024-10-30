@@ -33,7 +33,7 @@
 // Double description section
 .multiContentWrapper {
   display: flex;
-  margin: 10rem 4vw;
+  margin: 104px 15vw;
   gap: 21px;
 
   .secondaryContent {
@@ -48,10 +48,20 @@
   }
 }
 
+.titleContentWrapper {
+  display: flex;
+  margin: 104px 15vw;
+  gap: 21px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 // Double description section
 .singleContentWrapper {
   display: flex;
-  margin: 10rem 10vw;
+  margin: 104px 15vw;
   flex-direction: column;
   gap: 40px;
 }
@@ -79,6 +89,14 @@
   font-size: clamp(12px, 3vw, 24px);
   font-weight: 500;
   line-height: normal;
+
+  h4 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 23px;
+  }
 }
 
 // Parallax section
@@ -220,6 +238,7 @@
         /* Underline effect only for the text */
         .text {
           position: relative;
+
           &:before {
             content: '';
             position: absolute;
@@ -279,8 +298,10 @@
   mix-blend-mode: difference;
   position: fixed;
   z-index: 10000;
+
   .closebutton {
-    background-color: transparent; /* A light transparent background */
+    background-color: transparent;
+    /* A light transparent background */
     margin-top: 40px;
     margin-left: 4vw;
     width: 40px;
@@ -289,10 +310,13 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    backdrop-filter: blur(10px); /* Blurring the background */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    backdrop-filter: blur(10px);
+    /* Blurring the background */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
     position: relative;
-    border-radius: 100%; /* Ensure the button itself remains circular */
+    border-radius: 100%;
+    /* Ensure the button itself remains circular */
   }
 
   /* Creating the border and applying the blur to it using ::before */
@@ -306,10 +330,13 @@
     border: 2px solid gray;
     border-radius: 50%;
     box-sizing: border-box;
-    filter: blur(1px); /* Applying blur to the border */
-    transition: filter 0.3s ease; /* Smooth transition for blur */
-    pointer-events: none; /* Ignore pointer events for this element */
-    
+    filter: blur(1px);
+    /* Applying blur to the border */
+    transition: filter 0.3s ease;
+    /* Smooth transition for blur */
+    pointer-events: none;
+    /* Ignore pointer events for this element */
+
   }
 
   .closebutton svg {
@@ -320,18 +347,19 @@
   }
 
   .closebutton:hover::before {
-    filter: none; /* Remove the blur effect on hover */
+    filter: none;
+    /* Remove the blur effect on hover */
   }
 }
 
 
-.ul{
+.ul {
   padding-left: 40px;
   font-size: clamp(12px, 3vw, 24px);
   font-weight: 500;
   line-height: normal;
-  li{
+
+  li {
     padding-top: 20px;
   }
 }
-
