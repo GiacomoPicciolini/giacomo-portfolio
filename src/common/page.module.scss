@@ -310,8 +310,8 @@
     /* A light transparent background */
     margin-top: 40px;
     margin-left: 4vw;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -336,7 +336,7 @@
     border: 2px solid gray;
     border-radius: 50%;
     box-sizing: border-box;
-    filter: blur(1px);
+    filter: blur(1.5px);
     /* Applying blur to the border */
     transition: filter 0.3s ease;
     /* Smooth transition for blur */
