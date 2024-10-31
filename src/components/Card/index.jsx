@@ -41,29 +41,17 @@ const Card = ({
           <div className={styles.description}>
             <h2>{title}</h2>
             <p>{description}</p>
-            <div className={styles.labelsContainer}>
-              {tags.map((tag) => <Label text={tag} color={tagColor} key={tag} />)}
-            </div>
             <span>
               <Link href={link}>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='72'
-                  height='72'
-                  viewBox='0 0 72 72'
-                  fill='none'
-                >
-                  <path
-                    d='M51.3531 52.8263L52.8268 52.8005L52.8268 51.3265V20.6735L52.8268 19.1735L51.3268 19.1735L20.6737 19.1735L19.1998 19.1735L19.1739 20.6471L19.1209 23.67L19.0941 25.1963L20.6207 25.1963L42.5613 25.1963L18.5524 49.2052L17.4917 50.2659L18.5524 51.3265L20.6737 53.4479L21.7344 54.5085L22.795 53.4479L46.8039 29.439V51.3796L46.8039 52.9061L48.3302 52.8793L51.3531 52.8263Z'
-                    fill='black'
-                    stroke='black'
-                    stroke-width='3'
-                  />
+                <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
+                  <path d="M34.9583 58.7541L36.0186 59.7778L37.0609 58.7356L58.7359 37.0606L59.7965 36L58.7359 34.9393L37.0609 13.2643L36.0186 12.2221L34.9583 13.2458L32.7833 15.3458L31.6851 16.4062L32.7645 17.4856L48.2789 33H14.3252H12.8252V34.5V37.5V39H14.3252H48.2789L32.7645 54.5143L31.6851 55.5937L32.7833 56.6541L34.9583 58.7541Z" fill="black" stroke="black" stroke-width="3" />
                 </svg>
               </Link>
             </span>
+            <div className={styles.labelsContainer}>
+              {tags.map((tag) => <Label text={tag} color={tagColor} key={tag} />)}
+            </div>
           </div>
-
           <div className={styles.imageContainer}>
             <motion.div className={styles.inner} style={{ scale: imageScale }}>
               <Image fill src={src} alt='image' />

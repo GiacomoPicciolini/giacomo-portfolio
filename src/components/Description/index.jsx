@@ -31,28 +31,16 @@ export default function index() {
                     })}
                 </p>
                 <p>
+                    Currently Designing for Pilatus Aircraft
                 </p>
                 <motion.p variants={opacity} animate={isInView ? 'open' : 'closed'}>
-                    I was born in Bologna, Italy, in 1992. <br />
-                    <br />
-                    I started working in my hometown, Bologna, with <b>university internships </b>
-                    and afterwards in a <b>design agency, LeadSpot,</b> where I spent about 3
-                    years, meanwhile completing my <b>Master&apos;s degree in Communication
-                        of New Media and UX.</b><br />
-                    <br />
-                    I decided to move to Milan to complete a master&apos;s program at IED,
-                    and once finished, I started working at <b>Sky Television.</b> <br />
-                    <br />
-                    After a year, I moved to Zurich and started working for a small and
-                    ambitious startup called <b>Sharely</b>, which allowed me to immerse in a
-                    sensational project, where I had the opportunity to learn and
-                    experiment everyday. <br />
-                    <br />
-                    Currently, I work at <b>Pilatus Aircraft Ltd.</b>, in the Software department
-                    of the Ground Based Training System, taking care of the UX/UI of
-                    various products designed to teach new pilots how to fly, working with
-                    the best technologies the market has to offer, such as VR, and Flight
-                    Simulators.
+                    I was born in Bologna, Italy. <br />
+                    I began my career with a university internship, followed by three years at the <b>design agency LeadSpot</b>, while completing my degree in Communication of New Media and UX.<br />
+                    After moving to Milan for a master’s at <b>IED</b>, I worked as a UX/UI Designer at <b>Sky Television</b>.<br />
+                    More than a year later, I joined the startup <b>Sharely</b> in Zurich, where I gained valuable experience<br />
+                    in an innovative environment.<br />
+                    Currently, I work at <b>Pilatus Aircraft Ltd</b>., focusing on UX/UI for pilot training’s systems using<br />
+                    advanced technologies like VR and flight simulators.<br />
                 </motion.p>
             </div >
         </div >

@@ -19,7 +19,7 @@ const projects = [
     {
         title: 'Sky Television',
         description:
-            'Improving Sky Go App functionalities and rewrite experience on Sky Q and Sky On Demand',
+            'Improving Sky Go App  functionalities and redesign the User experience and User Journey of Sky Q and Sky On Demand Applications.',
         src: '/Sky/copertina_sky.jpg',
         link: '/sky',
         color: '#ECDFCC',
