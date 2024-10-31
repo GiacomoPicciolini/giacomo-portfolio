@@ -10,8 +10,8 @@ import ProjectFooter from '../../components/ProjectFooter/index';
 import styles from '../../common/page.module.scss';
 import { ContentBlock,ImageWrapper } from '../sharely/page';
 
-import image1 from '../../../public/Pilatus/sim_ok2.jpg';
-import image2 from '../../../public/Pilatus/MPS-MOCKUP.jpg';
+import image1 from '../../../public/Sky/copertina_sky.jpg';
+import image2 from '../../../public/Sky/screensky.png';
 
 const ParallaxSection = ({ backgroundImage }) => {
   const containerRef = useRef();
@@ -127,8 +127,8 @@ const Page = () => {
 
       <ImageWrapper
         images={[
-          { src: '/Pilatus/Simulator.jpg', alt: 'simulator image' },
-          { src: '/Pilatus/TMS-IMAGE.jpg', alt: 'TMS image' },
+          { src: '/Sky/sky2.jpg', alt: 'sky' },
+          { src: '/Sky/sky6.jpg', alt: 'sky' },
         ]}
       />
 
@@ -153,8 +153,7 @@ const Page = () => {
 
       <ImageWrapper
         images={[
-          { src: '/Pilatus/VR_ok.jpg', alt: 'VR image' },
-          { src: '/Pilatus/Simulator2.jpg', alt: 'Simulator image' },
+          { src: '/Sky/skygook.jpg', alt: 'VR image' },
         ]}
       />
 
@@ -172,12 +171,6 @@ const Page = () => {
           It taught me different testing methodologies and helped me understand that without a solid foundation of study and analysis, it is impossible to satisfy the end user.<br /><br />
         </p>
       </div>
-
-      <ImageWrapper
-        images={[
-          { src: '/Sky/skygook.jpg', alt: 'VR image' },
-        ]}
-      />
 
       <div className={styles.contact}>
         <div className={styles.body}>

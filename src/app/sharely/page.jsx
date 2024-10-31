@@ -85,7 +85,7 @@ export const ContentBlock = ({ label, texts }) => (
 export const ImageWrapper = ({ images }) => (
   <div className={styles.imageWrapper}>
     {images.map((image, index) => (
-      <div key={index} className={images.length  === 1 ? styles.singleDescriptionImage : styles.doubleDescriptionImage}>
+      <div key={index} className={images.length === 1 ? image?.video ? styles.singleDescriptionVideo : styles.singleDescriptionImage : styles.doubleDescriptionImage}>
         {image?.video === true ? (
           <video
             src={image.src}

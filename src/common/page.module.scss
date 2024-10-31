@@ -150,9 +150,15 @@
     }
   }
 
+  .singleDescriptionVideo {
+    position: relative;
+    width: 100vw;
+  }
+
   .singleDescriptionImage {
     position: relative;
     width: 100vw;
+    height: 50vh;
   }
 
   @media (max-width: 900px) {
