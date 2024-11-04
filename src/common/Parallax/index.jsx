@@ -2,6 +2,7 @@ import React from 'react';
 import { useRef } from 'react';
 import Image from 'next/image';
 import { useScroll, useTransform, motion } from 'framer-motion';
+import styles from "../page.module.scss"
 
 export const ParallaxSection = ({ backgroundImage }) => {
     const containerRef = useRef();
