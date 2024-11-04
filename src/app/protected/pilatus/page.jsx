@@ -9,61 +9,11 @@ import React from 'react';
 import ProjectFooter from '../../../components/ProjectFooter/index';
 import styles from '../../../common/page.module.scss';
 
-import { ContentBlock, ImageWrapper } from '../../sharely/page'
+import { IntroSection, ImageWrapper, ParallaxSection, ContentBlock } from "../../common/Parallax"
 
 import image1 from '../../../../public/Pilatus/sim_ok2.jpg';
 import image2 from '../../../../public/Pilatus/MPS-MOCKUP.jpg';
 
-const ParallaxSection = ({ backgroundImage }) => {
-  const containerRef = useRef();
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
-
-  return (
-    <div ref={containerRef} className={styles.parallaxSection}>
-      <div className={styles.fixedBackground}>
-        <motion.div style={{ y }} className={styles.backgroundImageWrapper}>
-          <Image
-            src={backgroundImage}
-            priority
-            placeholder='blur'
-            fill
-            alt='background image'
-            style={{ objectFit: 'cover' }}
-          />
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
-const IntroSection = ({ introImage }) => {
-  const containerRef = useRef();
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end start'],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ['0', '150vh']);
-
-  return (
-    <div className={styles.heroSection}>
-      <motion.div style={{ y }} className={styles.heroImage}>
-        <Image
-          src={introImage}
-          priority
-          placeholder='blur'
-          fill
-          alt='intro image'
-          style={{ objectFit: 'cover' }}
-        />
-      </motion.div>
-    </div>
-  );
-};
 
 const Page = () => {
   useEffect(() => {

@@ -2,110 +2,15 @@
 
 import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
-import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import ProjectFooter from '../../components/ProjectFooter/index';
 import styles from '../../common/page.module.scss';
+import { IntroSection, ImageWrapper, ParallaxSection, ContentBlock } from "../../common/Parallax"
 
 import image1 from '../../../public/Sharely/cover.jpg';
 import image2 from '../../../public/Sharely/final.jpg';
-
-const ParallaxSection = ({ backgroundImage }) => {
-  const containerRef = useRef();
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ['-10%', '10%']);
-
-  return (
-    <div ref={containerRef} className={styles.parallaxSection}>
-      <div className={styles.fixedBackground}>
-        <motion.div style={{ y }} className={styles.backgroundImageWrapper}>
-          <Image
-            src={backgroundImage}
-            priority
-            placeholder='blur'
-            fill
-            alt='background image'
-            style={{ objectFit: 'cover' }}
-          />
-        </motion.div>
-      </div>
-    </div>
-  );
-};
-
-const IntroSection = ({ introImage }) => {
-  const containerRef = useRef();
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end start'],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ['0', '150vh']);
-
-  return (
-    <div className={styles.heroSection}>
-      <motion.div style={{ y }} className={styles.heroImage}>
-        <Image
-          src={introImage}
-          priority
-          placeholder='blur'
-          fill
-          alt='intro image'
-          style={{ objectFit: 'cover' }}
-        />
-      </motion.div>
-    </div>
-  );
-};
-
-export const ContentBlock = ({ label, texts }) => (
-  <div className={styles.secondaryContent}>
-    <div className={styles.labelText}>
-      {label != "" ? <Image src={'/radio.svg'} width={24} height={24} alt='dot' /> : <></>}
-      <p>{label}</p>
-    </div>
-
-    <p className={styles.secondaryText}>
-      {texts.map((text, index) => (
-        <React.Fragment key={index}>
-          {text}
-          <br />
-          <br />
-        </React.Fragment>
-      ))}
-    </p>
-  </div>
-);
-
-export const ImageWrapper = ({ images }) => (
-  <div className={styles.imageWrapper}>
-    {images.map((image, index) => (
-      <div key={index} className={images.length === 1 ? image?.video ? styles.singleDescriptionVideo : styles.singleDescriptionImage : styles.doubleDescriptionImage}>
-        {image?.video === true ? (
-          <video
-            src={image.src}
-            controls
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          ></video>
-        ) : (
-          <Image
-            src={image.src}
-            fill
-            alt={image.alt}
-            style={{ objectFit: 'cover' }}
-          />
-        )}
-      </div>
-    ))}
-  </div>
-);
-
-
 
 const Page = () => {
   useEffect(() => {
