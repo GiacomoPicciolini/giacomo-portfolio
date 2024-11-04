@@ -200,7 +200,7 @@ const Page = () => {
                   width={24}
                   height={24}
                   alt='Back to top'
-                  src={'/arrow_upsvg'}
+                  src={'/arrow_up.svg'}
                 />
               </span>
               <span className={styles.text}>Back on top</span>
