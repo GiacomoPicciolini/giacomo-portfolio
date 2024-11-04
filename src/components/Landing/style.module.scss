@@ -1,4 +1,5 @@
 .landing {
+  text-wrap: pretty;
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -40,11 +41,12 @@
     position: absolute;
     right: 0;
     top: 8vh;
+    margin-right: 55px;
     justify-items: flex-end;
     color: #000;
     -webkit-text-stroke-width: 1;
     -webkit-text-stroke-color: #000;
-    font-size: clamp(24px, 3vw, 48px);
+    font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -56,9 +58,11 @@
     .description {
       position: relative;
       display: flex;
-      justify-content: center; /* Horizontally centers the content */
+      justify-content: center;
+      /* Horizontally centers the content */
       max-width: 70%;
-      margin: 4vw; /* Center the description container itself */
+      margin: 4vw;
+      /* Center the description container itself */
     }
   }
 
@@ -66,9 +70,11 @@
     .description {
       position: relative;
       display: flex;
-      justify-content: center; /* Horizontally centers the content */
+      justify-content: center;
+      /* Horizontally centers the content */
       max-width: 378px;
-      margin: 4vw; /* Center the description container itself */
+      margin: 4vw;
+      /* Center the description container itself */
     }
   }
 }

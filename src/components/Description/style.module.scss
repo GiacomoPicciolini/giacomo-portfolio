@@ -1,7 +1,7 @@
 .description {
   display: flex;
   justify-content: center;
-  height: 130vh;
+  height: 110vh;
 
   @media (max-width: 900px) {
     margin-bottom: 10vh;
@@ -10,12 +10,13 @@
   .body {
     margin: 4vw;
     margin-top: 16vh;
-    margin-bottom: 16vh;
     width: 100%;
     gap: 50px;
     position: relative;
 
     p {
+      text-wrap: pretty;
+
       &:nth-of-type(1) {
         z-index: 10;
         max-width: 60%;
@@ -24,6 +25,7 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        margin-bottom: 20px;
 
         span {
           margin-right: 3px;
@@ -37,7 +39,6 @@
 
         @media (max-width: 900px) {
           max-width: 100%;
-          margin-bottom: 20px;
         }
       }
 
@@ -70,7 +71,7 @@
         margin-top: 180px;
 
         b {
-          font-weight: 800;
+          font-weight: 700;
         }
 
         @media (max-width: 900px) {
@@ -88,23 +89,17 @@
   }
 
   .imageContainer {
-    background: url('/giacomo.png') lightgray 50% / cover no-repeat;
-    width: 414px;
-    height: 475px;
+    width: 171px;
+    height: 171px;
     flex-shrink: 0;
     position: absolute;
     overflow: hidden;
-    right: -300px;
+    left: -90px;
+    top: -60px;
+    z-index: -10;
 
     img {
       object-fit: cover;
-    }
-
-    @media (max-width: 900px) {
-      width: 232px;
-      height: 266px;
-      right: -100px;
-      bottom: -100px;
     }
   }
 
