@@ -27,6 +27,8 @@
     padding-right: 56px;
 
     img {
+      width: 522px;
+      height: 286px;
       padding-left: 56px;
     }
   }
@@ -46,7 +48,7 @@
     color: #000;
     -webkit-text-stroke-width: 1;
     -webkit-text-stroke-color: #000;
-    font-size: 48px;
+    font-size: 6vh;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -56,12 +58,11 @@
   /* For screens under 900px */
   @media (max-width: 900px) {
     .description {
-      font-size: 40px;
+      font-size: 6vh;
       position: relative;
       display: flex;
       justify-content: center;
       /* Horizontally centers the content */
-      max-width: 70%;
       margin: 4vw;
       /* Center the description container itself */
     }

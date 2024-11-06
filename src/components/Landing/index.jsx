@@ -7,6 +7,8 @@ import { slideUp } from './animation';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+import image from "../../../public/Pilatus/VR_ok.jpg"
+
 export default function Home() {
   const firstText = useRef(null);
   const imgText = useRef(null);
@@ -67,9 +69,7 @@ export default function Home() {
               LATEST WORK
               <Image
                 ref={imgText}
-                width={522}
-                height={286}
-                src={'/Pilatus/VR_ok.jpg'}
+                src={image}
                 alt="VR"
               />
             </p>
@@ -77,9 +77,7 @@ export default function Home() {
               LATEST WORK
               <Image
                 ref={imgText}
-                width={522}
-                height={286}
-                src={'/Pilatus/VR_ok.jpg'}
+                src={image}
                 alt="VR"
               />
             </p>
