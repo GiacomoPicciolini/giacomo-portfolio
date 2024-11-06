@@ -57,7 +57,7 @@ export default function Cards() {
     });
 
     return (
-        <div ref={container} className={styles.main}>
+        <div id="work" ref={container} className={styles.main}>
             {projects.map((project, i) => {
                 const targetScale = 1 - (projects.length - i) * 0.05;
                 return (

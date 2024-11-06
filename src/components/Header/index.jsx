@@ -9,7 +9,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function index() {
     const header = useRef(null);
@@ -34,31 +33,43 @@ export default function index() {
         })
     }, [])
 
+    // Smooth scroll function
+    const handleSmoothScroll = (e, id) => {
+        e.preventDefault();
+        const element = document.getElementById(id);
+        if (element) {
+            window.scrollTo({
+                top: element.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    };
+
     return (
         <>
             <div ref={header} className={styles.header}>
                 <div className={styles.nav}>
                     <Magnetic>
                         <div className={styles.el}>
-                            <Link href={"#hey"}>01/HEY</Link>
+                            <a href="#hey" onClick={(e) => handleSmoothScroll(e, 'hey')}>01/HEY</a>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className={styles.el}>
-                            <Link href={"#about"}>02/ABOUT</Link>
+                            <a href="#about" onClick={(e) => handleSmoothScroll(e, 'about')}>02/ABOUT</a>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className={styles.el}>
-                            <Link href={"#work"}>03/WORK</Link>
+                            <a href="#work" onClick={(e) => handleSmoothScroll(e, 'work')}>03/WORK</a>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>
                     <Magnetic>
                         <div className={styles.el}>
-                            <Link href={"#contact"}>04/CONTACT</Link>
+                            <a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')}>04/CONTACT</a>
                             <div className={styles.indicator}></div>
                         </div>
                     </Magnetic>

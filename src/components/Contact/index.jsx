@@ -9,7 +9,7 @@ import Link from 'next/link';
 export default function index() {
 
     return (
-        <motion.div className={styles.contact}>
+        <motion.div id="contact" className={styles.contact}>
             <div className={styles.body}>
                 <div className={styles.title}>
                     <h2>Want to</h2>

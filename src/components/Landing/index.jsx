@@ -54,36 +54,37 @@ export default function Home() {
 
   return (
     <motion.main
+      id='hey'
       variants={slideUp}
       initial="initial"
       animate="enter"
       className={styles.landing}
     >
       <Link href="/protected/pilatus">
-      <div className={styles.sliderContainer}>
-        <div ref={slider} className={styles.slider}>
-          <p ref={firstText}>
-            LATEST WORK
-            <Image
-              ref={imgText}
-              width={522}
-              height={286}
-              src={'/Pilatus/VR_ok.jpg'}
-              alt="VR"
-            />
-          </p>
-          <p ref={secondText}>
-            LATEST WORK
-            <Image
-              ref={imgText}
-              width={522}
-              height={286}
-              src={'/Pilatus/VR_ok.jpg'}
-              alt="VR"
-            />
-          </p>
+        <div className={styles.sliderContainer}>
+          <div ref={slider} className={styles.slider}>
+            <p ref={firstText}>
+              LATEST WORK
+              <Image
+                ref={imgText}
+                width={522}
+                height={286}
+                src={'/Pilatus/VR_ok.jpg'}
+                alt="VR"
+              />
+            </p>
+            <p ref={secondText}>
+              LATEST WORK
+              <Image
+                ref={imgText}
+                width={522}
+                height={286}
+                src={'/Pilatus/VR_ok.jpg'}
+                alt="VR"
+              />
+            </p>
+          </div>
         </div>
-      </div>
       </Link>
       <div
         data-scroll
