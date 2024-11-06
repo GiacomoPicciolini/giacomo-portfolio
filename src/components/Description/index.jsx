@@ -35,7 +35,7 @@ export default function index() {
 
                     <Link
                         className={styles.link}
-                        href="/protected/pilatus"
+                        href="https://www.pilatus-aircraft.com/"
                     >
                         <span className={styles.firstImage}>
                             <svg
