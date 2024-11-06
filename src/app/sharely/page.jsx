@@ -140,7 +140,7 @@ const Page = () => {
               <Link href='/sky'>Next Project</Link>
             </div>
             <Link href='/sky' className={styles.next}>
-              <span>Sky</span>
+              <span>Sky Television</span>
               <img src='/arrow_forward_2.svg' alt='Next' />
             </Link>
           </div>

@@ -84,7 +84,7 @@ const Page = () => {
       <div className={styles.singleContentWrapper}>
         <div className={styles.labelText}>
           <Image src={'/radio.svg'} width={24} height={24} alt='dot' />
-          <p>OVERVIEW</p>
+          <p>BUILDING A PROCESS</p>
         </div>
         <p className={styles.secondaryText}>
           In collaboration with other Design Teams, we built the company’s first
@@ -109,9 +109,16 @@ const Page = () => {
       <ImageWrapper
         images={[
           { src: '/Pilatus/VR_ok.jpg', alt: 'VR image' },
+        ]}
+      />
+
+
+      <ImageWrapper
+        images={[
           { src: '/Pilatus/Simulator2.jpg', alt: 'Simulator image' },
         ]}
       />
+
 
       <div className={styles.singleContentWrapper}>
         <div className={styles.labelText}>
