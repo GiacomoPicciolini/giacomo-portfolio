@@ -10,7 +10,7 @@
 
   .sliderContainer {
     position: absolute;
-    top: calc(100vh - 500px);
+    top: calc(85vh - clamp(250px, 44vw, 400px));
   }
 
   .slider {
@@ -22,13 +22,13 @@
     position: relative;
     margin: 0px;
     color: #111;
-    font-size: 400px;
+    font-size: clamp(250px, 44vw, 400px);
     font-weight: 900;
     padding-right: 56px;
 
     img {
-      width: 522px;
-      height: 286px;
+      width: clamp(270px, 55vw, 450px);
+      height: auto;
       padding-left: 56px;
     }
   }
@@ -42,41 +42,16 @@
   .description {
     position: absolute;
     right: 0;
-    top: 10vh;
+    top: 5vh;
     margin-right: 55px;
     justify-items: flex-end;
     color: #000;
     -webkit-text-stroke-width: 1;
     -webkit-text-stroke-color: #000;
-    font-size: 6vh;
+    font-size: clamp(24px, 6vw, 48px);
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     max-width: 70%;
-  }
-
-  /* For screens under 900px */
-  @media (max-width: 900px) {
-    .description {
-      font-size: 6vh;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      /* Horizontally centers the content */
-      margin: 4vw;
-      /* Center the description container itself */
-    }
-  }
-
-  @media (max-width: 500px) {
-    .description {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      /* Horizontally centers the content */
-      max-width: 378px;
-      margin: 4vw;
-      /* Center the description container itself */
-    }
   }
 }
