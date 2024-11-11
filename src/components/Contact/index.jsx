@@ -16,6 +16,15 @@ export default function index() {
                     <h2>Get in Touch?</h2>
                 </div>
                 <div className={styles.nav}>
+                    <a href='CV'>
+                        <span className={styles.firstImage}>
+                            <Image color="white" width={24} height={24} alt="Tel" src={"/arrow_forward.svg"} />
+                        </span>
+                        <span className={styles.text}>CV</span>
+                        <span className={styles.secondImage}>
+                            <Image color="white" width={24} height={24} alt="Tel" src={"/arrow_forward.svg"} />
+                        </span>
+                    </a>
                     <a href='tel:+41 76 512 59 32'>
                         <span className={styles.firstImage}>
                             <Image color="white" width={24} height={24} alt="Tel" src={"/arrow_forward.svg"} />
