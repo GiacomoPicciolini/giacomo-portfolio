@@ -34,6 +34,7 @@ export default function index() {
                     Currently Designing for
 
                     <Link
+                        scroll={false}
                         className={styles.link}
                         href="https://www.pilatus-aircraft.com/"
                     >

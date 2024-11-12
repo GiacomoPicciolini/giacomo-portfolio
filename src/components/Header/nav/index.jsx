@@ -64,6 +64,7 @@ export default function index({ setIsActive }) {
           {
             navItems.map((data, index) => {
               return <Link
+                scroll={false}
                 key={index}
                 data={{ ...data, index }}
                 isActive={selectedIndicator == data.href}

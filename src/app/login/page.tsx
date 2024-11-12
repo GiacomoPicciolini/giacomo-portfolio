@@ -22,7 +22,7 @@ export default async function SignIn() {
 
   return (
     <main className={styles.main}>
-      <Link className={styles.closebuttonContainer} href='/'>
+      <Link scroll={false} className={styles.closebuttonContainer} href='/'>
         <div className={styles.closebutton}>
           <svg
             width='24'

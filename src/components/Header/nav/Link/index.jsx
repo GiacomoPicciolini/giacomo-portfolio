@@ -22,7 +22,7 @@ export default function Index({data, isActive, setSelectedIndicator}) {
           animate={isActive ? "open" : "closed"} 
           className={styles.indicator}>
         </motion.div>
-        <Link href={href}>{title}</Link>
+        <Link scroll={false} href={href}>{title}</Link>
       </motion.div>
     )
 }

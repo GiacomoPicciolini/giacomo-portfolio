@@ -25,7 +25,7 @@ const Page = () => {
 
   return (
     <main className={styles.container}>
-      <Link className={styles.closebuttonContainer} href='/'>
+      <Link scroll={false} className={styles.closebuttonContainer} href='/'>
         <div className={styles.closebutton}>
           <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g id="close">
@@ -124,16 +124,16 @@ const Page = () => {
         <div className={styles.body}>
           <div className={styles.nav}>
             <div className={styles.projects}>
-              <Link href='/protected/pilatus'>Next Project</Link>
+              <Link scroll={false} href='/protected/pilatus'>Next Project</Link>
             </div>
-            <Link href='/protected/pilatus' className={styles.next}>
+            <Link scroll={false} href='/protected/pilatus' className={styles.next}>
               <span>Pilatus</span>
               <img src='/arrow_forward_2.svg' alt='Next' />
             </Link>
           </div>
           <div className={styles.nav}>
             <div></div>
-            <Link href='/sharely' className={styles.next}>
+            <Link scroll={false} href='/sharely' className={styles.next}>
               <img src='/arrow_back.svg' alt='Previous' />
             </Link>
           </div>

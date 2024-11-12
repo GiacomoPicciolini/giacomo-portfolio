@@ -24,7 +24,7 @@ const Page = () => {
 
   return (
     <main className={styles.container}>
-      <Link className={styles.closebuttonContainer} href='/'>
+      <Link scroll={false} className={styles.closebuttonContainer} href='/'>
         <div className={styles.closebutton}>
           <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g id="close">
@@ -79,16 +79,16 @@ const Page = () => {
         <ContentBlock
           label='THE DESIGN'
           texts={[
-            'Just as in any other field, the military aviation sector has felt the need to innovate to keep up with the times, and Pilatus has decided to seize the opportunity.',
-            'At the beginning of 2022, the "Common Platform" project was launched, aimed at creating new teaching tools based on the latest technologies, improving and integrating established products.',
+            'By integrating analytics results from Hotjar, Metabase, and Google Analytics with other types of tests such as interviews, mapping, and user journey analysis, we began redesigning the existing parts of the platform and adding new functionalities.',
+            'The design encourages users not only to search for items using common e-commerce best practices but also to upload what they own. Features like an automatic price calculator show how the price is built. This approach helps Sharely create circularity and offer an ever-expanding choice of items.',
           ]}
         />
         <ContentBlock
           label=""
           texts={[
-            'The ultimate goal is to develop a wide range of products that fully cover every aspect of Training Academy instruction.',
-            'Theoretical lessons, based on images and 3D aircraft models, VR and XR familiarization devices, mission planning and debriefing tools, full-flight simulators.',
-            'The real goal was to create this set of products, interconnecting them through a centralized management system. This system, called Academy TMS, not only collects and analyzes data but also schedules the academic year and manages content, training assets, and users.',
+            'The platform, designed for both desktop and mobile, is tailored to different user types, offering specific functionalities depending on whether the user is a private individual or a store.',
+            'A centralized dashboard allows all operational aspects to be managed in one place, providing not only transaction control but also messaging and review services, similar to a social media approach.',
+            'A significant part of the work focused on the item offerings. Using research tools like card sorting, we investigated which objects users associated with specific categories and what they were looking for.',
           ]}
         />
       </div>
@@ -137,16 +137,16 @@ const Page = () => {
         <div className={styles.body}>
           <div className={styles.nav}>
             <div className={styles.projects}>
-              <Link href='/sky'>Next Project</Link>
+              <Link scroll={false} href='/sky'>Next Project</Link>
             </div>
-            <Link href='/sky' className={styles.next}>
+            <Link scroll={false} href='/sky' className={styles.next}>
               <span>Sky Television</span>
               <img src='/arrow_forward_2.svg' alt='Next' />
             </Link>
           </div>
           <div className={styles.nav}>
             <div></div>
-            <Link href='/protected/pilatus' className={styles.next}>
+            <Link scroll={false} href='/protected/pilatus' className={styles.next}>
               <img src='/arrow_back.svg' alt='Previous' />
             </Link>
           </div>
