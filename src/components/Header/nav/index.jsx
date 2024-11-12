@@ -11,19 +11,19 @@ import Image from 'next/image';
 const navItems = [
   {
     title: "Hey",
-    href: "/",
+    href: "/#hey",
   },
   {
     title: "Pilatus Aircraft",
-    href: "/protected/pilatus",
+    href: "/protected/pilatus/#top",
   },
   {
     title: "Sharely",
-    href: "/sharely",
+    href: "/sharely/#top",
   },
   {
     title: "Sky Television",
-    href: "/sky",
+    href: "/sky/#top",
   },
   {
     title: "About",
@@ -64,7 +64,7 @@ export default function index({ setIsActive }) {
           {
             navItems.map((data, index) => {
               return <Link
-                scroll={false}
+                scroll={true}
                 key={index}
                 data={{ ...data, index }}
                 isActive={selectedIndicator == data.href}

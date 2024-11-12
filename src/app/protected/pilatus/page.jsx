@@ -26,8 +26,8 @@ const Page = () => {
   }, []);
 
   return (
-    <main className={styles.container}>
-      <Link scroll={false} className={styles.closebuttonContainer} href='/'>
+    <main id="top" className={styles.container}>
+      <Link scroll={true} className={styles.closebuttonContainer} href='/#hey'>
         <div className={styles.closebutton}>
           <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <g id="close">
@@ -185,16 +185,16 @@ const Page = () => {
         <div className={styles.body}>
           <div className={styles.nav}>
             <div className={styles.projects}>
-              <Link scroll={false} href='/sharely'>Next Project</Link>
+              <Link scroll={true} href='/sharely/#top'>Next Project</Link>
             </div>
-            <Link scroll={false} href='/sharely' className={styles.next}>
+            <Link scroll={true} href='/sharely/#top' className={styles.next}>
               <span>Sharely</span>
               <img src='/arrow_forward_2.svg' alt='Next' />
             </Link>
           </div>
           <div className={styles.nav}>
             <div></div>
-            <Link scroll={false} href='/sky' className={styles.next}>
+            <Link scroll={true} href='/sky/#top' className={styles.next}>
               <img src='/arrow_back.svg' alt='Previous' />
             </Link>
           </div>

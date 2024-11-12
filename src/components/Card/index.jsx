@@ -42,7 +42,7 @@ const Card = ({
             <h2>{title}</h2>
             <p>{description}</p>
             <span>
-              <Link scroll={false} href={link}>
+              <Link scroll={true} href={link + "/#top"}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
                   <path d="M34.9583 58.7541L36.0186 59.7778L37.0609 58.7356L58.7359 37.0606L59.7965 36L58.7359 34.9393L37.0609 13.2643L36.0186 12.2221L34.9583 13.2458L32.7833 15.3458L31.6851 16.4062L32.7645 17.4856L48.2789 33H14.3252H12.8252V34.5V37.5V39H14.3252H48.2789L32.7645 54.5143L31.6851 55.5937L32.7833 56.6541L34.9583 58.7541Z" fill="black" stroke="black" strokeWidth="3" />
                 </svg>
@@ -54,7 +54,7 @@ const Card = ({
           </div>
           <div className={styles.imageContainer}>
             <motion.div className={styles.inner} style={{ scale: imageScale }}>
-              <Link scroll={false} href={link}>
+              <Link scroll={true} href={link + "/#top"}>
                 <Image fill src={src} alt='image' />
               </Link>
             </motion.div>

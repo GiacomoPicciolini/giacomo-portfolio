@@ -21,8 +21,8 @@ export default async function SignIn() {
   const csrfToken = cookieStore.get(csrfTokenCookie)?.value.split('|')[0];
 
   return (
-    <main className={styles.main}>
-      <Link scroll={false} className={styles.closebuttonContainer} href='/'>
+    <main id="top" className={styles.main}>
+      <Link scroll={true} className={styles.closebuttonContainer} href='/#hey'>
         <div className={styles.closebutton}>
           <svg
             width='24'

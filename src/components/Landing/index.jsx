@@ -62,7 +62,7 @@ export default function Home() {
       animate="enter"
       className={styles.landing}
     >
-      <Link scroll={false} href="/protected/pilatus">
+      <Link scroll={true} href="/protected/pilatus/#top">
         <div className={styles.sliderContainer}>
           <div ref={slider} className={styles.slider}>
             <p ref={firstText}>
