@@ -62,7 +62,7 @@ export default function Home() {
       animate="enter"
       className={styles.landing}
     >
-      <Link scroll={true} href="/protected/pilatus/#top">
+      <a href="/protected/pilatus#top">
         <div className={styles.sliderContainer}>
           <div ref={slider} className={styles.slider}>
             <p ref={firstText}>
@@ -83,7 +83,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </Link>
+      </a>
       <div
         data-scroll
         data-scroll-speed={0.1}
