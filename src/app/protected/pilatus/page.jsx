@@ -44,10 +44,7 @@ const Page = () => {
           <p>PROJECT</p>
         </div>
         <p className={styles.primaryText}>
-          The GBTS department is dedicated to developing software for pilot and
-          technician training, teaching students how to approach aircraft
-          through the use of theoretical lessons, flight simulators, and
-          augmented reality.
+          The GBTS department is dedicated to developing software for pilots and technicians training, teaching students how to approach aircraft through the use of theoretical lessons, flight simulators, and augmented reality.
         </p>
       </div>
 
@@ -57,21 +54,25 @@ const Page = () => {
         <ContentBlock
           label='OVERVIEW'
           texts={[
-            'Just as in any other field, the military aviation sector has felt the need to innovate to keep up with the times, and Pilatus has decided to seize the opportunity.',
-            'At the beginning of 2022, the "Common Platform" project was launched, aimed at creating new teaching tools based on the latest technologies, improving and integrating established products.',
+            'Like many other fields, the military aviation sector must innovate to stay current. Pilatus has embraced this challenge.',
+            'In early 2022, the ‘Common Platform’ project was launched to develop new teaching tools using the latest technologies, while also enhancing and integrating existing products.',
           ]}
         />
         <ContentBlock
           label='CHALLENGES AND GOALS'
           texts={[
-            'The ultimate goal is to develop a wide range of products that fully cover every aspect of Training Academy instruction.',
-            'Theoretical lessons, based on images and 3D aircraft models, VR and XR familiarization devices, mission planning and debriefing tools, full-flight simulators.',
-            'The real goal was to create this set of products, interconnecting them through a centralized management system. This system, called Academy TMS, not only collects and analyzes data but also schedules the academic year and manages content, training assets, and users.',
+            'The ultimate goal is to develop a comprehensive range of products that cover every aspect of Training Academy instruction.',
+            'These include theoretical lessons using images and 3D aircraft models, VR and XR familiarization devices, mission planning and debriefing tools, and full-flight simulators.',
+            'The aim was to create an interconnected set of products managed through a centralized system called Academy TMS. This system not only collects and analyzes data but also schedules the academic year and manages content, training assets, and users.',
           ]}
         />
       </div>
 
-      <ParallaxSection backgroundImage={image2} />
+      <ImageWrapper
+        images={[
+          { src: '/Pilatus/MPS-MOCKUP.jpg', alt: 'simulator image' },
+        ]}
+      />
 
       <ImageWrapper
         images={[
@@ -86,22 +87,13 @@ const Page = () => {
           <p>BUILDING A PROCESS</p>
         </div>
         <p className={styles.secondaryText}>
-          In collaboration with other Design Teams, we built the company’s first
-          Design System.
+          In collaboration with other design teams, we first built the company’s Design System.
           <br />
           <br />
-          My first Goal was to analyze how to incorporate Design discipline into
-          an already well-defined development process, with a V-Based approach,
-          and established work phases that include System Engineers, Project
-          Managers, and V&V.
+          My initial goal was to analyze how to incorporate design discipline into an already well-defined development process, using a V-based approach with established work phases that include system engineers, project managers, and V&V engineers.
           <br />
           <br />
-          We used the Google Design Sprint methodology, tailoring the process to
-          fit our needs and expectations, as a baseline to create our own design
-          process. Introducing workshops, User Research, and collaborating with
-          other departments, we were able to fit Design into the Pilatus
-          Lifecycle, seeing immediate results and improvements in the products
-          under development.
+          We adopted the Google Design Sprint methodology, tailoring it to fit our needs and expectations as a baseline for creating our own design process. By introducing workshops, conducting user research, and collaborating with other departments, we successfully integrated design into the Pilatus lifecycle. This integration quickly yielded noticeable improvements in the products under development.
         </p>
       </div>
 
@@ -114,7 +106,7 @@ const Page = () => {
 
       <ImageWrapper
         images={[
-          { src: '/Pilatus/Simulator2.jpg', alt: 'Simulator image' },
+          { src: '/Pilatus/tms2.jpg', alt: 'Simulator image' },
         ]}
       />
 
@@ -125,30 +117,22 @@ const Page = () => {
           <p>THE DESIGN</p>
         </div>
         <p className={styles.secondaryText}>
-          I have designed the UX and UI of 3 completely new products: Academy
-          TMS, Interactive Wallboards, and Familiarization Learning CBT.
+          I have designed the UX and UI for three completely new products: Academy TMS, Interactive Wallboards, and Familiarization Learning Computer-Based Training.
           <br />
           <br />
-          Besides that, a full redesign of existing products like Mission
-          Planner and Debrief, and Computer Based Training, was completed to
-          visually unify them and add new features and functionalities that
-          allowed an exchange of data and full integration.
+          Additionally, I completed a full redesign of existing products such as Mission Planner, Debrief, and Computer-Based Training. This redesign aimed to unify their visual appearance and add new features and functionalities, enabling data exchange and full integration.
           <br />
           <br />
-          Thanks to user research, I tackled complicated topics such as design
-          for VR, and learned how end users could influence design choices. The
-          research and testing allowed us to simplify the User Journey as much
-          as possible in very complicated management software, used by many
-          Aviation Academies worldwide.
+          Through user research, I tackled complex topics like VR design and observed how end users could influence design choices. The research and testing allowed us to simplify the user journey as much as possible in very complex management software used by many aviation academies worldwide.
         </p>
       </div>
 
       <ImageWrapper
         images={[
-          { src: '/Pilatus/IWB_Mockup.jpg', alt: 'Mockup image' },
-          { src: '/Pilatus/GBTS_27ok.jpg', alt: 'GBTS image' },
-          { src: '/Pilatus/login_ok.jpg', alt: 'Login image' },
-          { src: '/Pilatus/TMS-IMAGE.jpg', alt: 'TMS image' },
+          { src: '/Pilatus/IWB_OLD.jpg', alt: 'Mockup image', hoverSrc: '/Pilatus/IWB_NEW.jpg' },
+          { src: '/Pilatus/TMS-OLD.jpg', alt: 'GBTS image', hoverSrc: '/Pilatus/TMS-New.jpg' },
+          { src: '/Pilatus/CBT-OLD.jpg', alt: 'Login image', hoverSrc: '/Pilatus/CBT-NEW.jpg' },
+          { src: '/Pilatus/MPS_OLD.jpg', alt: 'TMS image', hoverSrc: '/Pilatus/MPS_NEW.jpg' },
         ]}
       />
 
@@ -158,25 +142,16 @@ const Page = () => {
           <p>THE TAKEAWAY</p>
         </div>
         <p className={styles.secondaryText}>
-          Through the design of new products, we have managed to increase the
-          satisfaction rate of current customers, extending existing contracts
-          and signing deals with 3 new Training Academies.
+          Through the design of new products, we have significantly increased customer satisfaction, extended existing contracts, and signed deals with three new training academies.
           <br />
           <br />
-          Working with focus groups and surveys, we confirmed how product
-          usability has increased exponentially and how the Pilatus brand is now
-          universally recognized across all its products.
+          By working with focus groups and conducting surveys, we confirmed that product usability has improved exponentially and that the Pilatus brand is now universally recognized across all its products.
           <br />
           <br />
-          The biggest challenge was to introduce design discipline in a strongly
-          established engineers/aviation environment, educating people to a new
-          perspective based on agile methods, user-centered design, and
-          iterative approaches.
+          The biggest challenge was introducing the discipline of design into a well-established engineering and aviation environment. This required educating people on new perspectives based on agile methods, user-centered design, and iterative approaches.
           <br />
           <br />
-          This experience taught me how to find creative solutions to problems
-          often unique to design projects, such as technical limitations of an
-          app or the inability to use common User Research methodologies.
+          This experience taught me how to find creative solutions to unique problems, such as technical limitations of an app or the inability to use common user research methodologies.
         </p>
       </div>
 

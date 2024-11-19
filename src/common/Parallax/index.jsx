@@ -73,25 +73,45 @@ export const ContentBlock = ({ label, texts }) => (
     </div>
 );
 
+
 export const ImageWrapper = ({ images }) => (
-    <div className={styles.imageWrapper}>
-        {images.map((image, index) => (
-            <div key={index} className={images.length === 1 ? image?.video ? styles.singleDescriptionVideo : styles.singleDescriptionImage : styles.doubleDescriptionImage}>
-                {image?.video === true ? (
-                    <video
-                        src={image.src}
-                        controls
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                    ></video>
-                ) : (
-                    <Image
-                        src={image.src}
-                        fill
-                        alt={image.alt}
-                        style={{ objectFit: 'cover' }}
-                    />
-                )}
-            </div>
-        ))}
-    </div>
+    <div className={images.length > 3 && styles.hoverInfoContainer}>
+        <div className={styles.imageWrapper}>
+            {images.map((image, index) => (
+                <div
+                    key={index}
+                    className={images.length === 1
+                        ? image?.video
+                            ? styles.singleDescriptionVideo
+                            : styles.singleDescriptionImage
+                        : images.length === 2 ? styles.doubleDescriptionImage : styles.fourDescriptionImage} >
+                    {image?.video === true ? (
+                        <video
+                            src={image.src}
+                            controls
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        ></video>
+                    ) : (
+                        <div className={styles.imageContainer}>
+                            <Image
+                                src={image.src}
+                                fill
+                                alt={image.alt}
+                                className={image.hoverSrc && styles.baseImage}
+                                style={{ objectFit: 'cover' }} />
+                            {image.hoverSrc && (
+                                <Image
+                                    src={image.hoverSrc}
+                                    fill
+                                    alt={`${image.alt} (hover)`}
+                                    className={styles.hoverImage}
+                                    style={{ objectFit: 'cover' }} />
+                            )}
+                        </div>
+                    )}
+                </div>
+            ))}
+        </div>
+        {images.length > 3 && <div className={styles.hoverInfo}>Hover over the images to see the transformation</div>}
+    </div >
 );

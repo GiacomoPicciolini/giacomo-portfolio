@@ -52,17 +52,17 @@ const Page = () => {
         <ContentBlock
           label='OVERVIEW'
           texts={[
-            '"Own less, do More" is the claim that sums up its vision - why own and waste, when anyone can be part of a circular community in which to exchange objects?',
-            'When I started to work with Sharely we were ambitious, we had a vision, but we also had to face a lot of obstacles.',
-            'Beyond the economic situation, we had to understand every single aspect of this business. Usage data was missing, there was no product study, user feedback was absent, and on top of that was missing a strong and recognizable  Brand image.'
+            '“Own less, do more” is the claim that sums up our vision: why own and waste when you can be part of a circular community where objects are exchanged?',
+            'When I started working with Sharely, we were ambitious and had a clear vision, but we also faced many obstacles.',
+            'Beyond the economic situation, we had to understand every single aspect of the business. Usage data was missing, there was no product study, user feedback was absent, and we lacked a strong and recognizable brand image'
           ]}
         />
         <ContentBlock
           label='CHALLENGES AND GOALS'
           texts={[
-            'The goal was to understand the environment and user needs, fully grasp the products offered, investigate market demands, and modernize the platform to provide the requested features.',
-            'We launched an MVP as quickly as possible to gather data and determine how to develop a roadmap. Simultaneously, we began various user testing initiatives, engaging in surveys and interviews with those users who were already familiar with the old version of Sharely.',
-            'Once the initial phase was completed, the goal was to develop a platform - with a model similar to an ecommerce - that allowed the rental of items, adhering to stakeholder deadlines and growing numbers over time to attract potential investors.',
+            'Our goal was to understand the environment and user needs, fully grasp the products offered, investigate market demands, and modernize the platform to provide the requested features.',
+            'We quickly launched an MVP to gather data and develop a roadmap. Simultaneously, we initiated various user testing activities, including surveys and interviews with users familiar with the old version of Sharely.',
+            'After completing the initial phase, our objective was to develop a platform—similar to an e-commerce model—that facilitated item rentals. We aimed to meet stakeholder deadlines and achieve growth over time to attract potential investors.',
           ]}
         />
       </div>

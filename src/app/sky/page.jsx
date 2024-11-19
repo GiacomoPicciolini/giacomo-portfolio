@@ -53,25 +53,22 @@ const Page = () => {
         <ContentBlock
           label='OVERVIEW'
           texts={[
-            'Sky Television Broadcast was initially established as a pan-European private television network, gradually becoming a market leader over the years. However, it expanded its offerings over time by providing streaming services and apps for various platforms. This expansion has made the content consumption experience increasingly engaging and up-to-date for its subscribers, keeping pace with evolving trends.',
-            'Before fully diving into my role as a UX/UI Designer, I had the opportunity to briefly join the Graphic Design Team to fully understand the rhythms, organization, and environment I was in. ',
+            'Sky Television Broadcast was initially established as a pan-European private television network and gradually became a market leader. Over time, it expanded its offerings to include streaming services and apps for various platforms. This expansion has made the content consumption experience more engaging and up-to-date for subscribers, keeping pace with evolving trends.',
+            'Before fully diving into my role as a UX/UI Designer, I had the opportunity to briefly join the Graphic Design Team. This experience allowed me to fully understand the rhythms, organization, and environment of the company.',
           ]}
         />
         <ContentBlock
           label=''
           texts={[
-            'After completing this short experience and having learned what it means to work in a 24-hour on-air television environment, I began working on the UX/UI of various apps provided by Sky to its customers: Sky Go and Sky On Demand.',
+            'After completing this brief experience and gaining insight into the demands of a 24-hour on-air television environment, I began working on the UX/UI for various Sky apps, including Sky Go and Sky On Demand',
           ]}
         />
       </div>
       <div className={styles.titleContentWrapper}>
         <h3>
-          &quot;Having had the opportunity to work in different roles has teached me how to communicate clearly and effectively, placing a strong emphasis on data visualization and visual clarity in the message&quot;
+          &quot;Having had the opportunity to work in different roles has taught me how to communicate clearly and effectively, with a strong emphasis on data visualization and visual clarity in messaging&quot;
         </h3>
       </div>
-
-
-      <ParallaxSection backgroundImage={image2} />
 
       <ImageWrapper
         images={[
@@ -101,7 +98,7 @@ const Page = () => {
 
       <ImageWrapper
         images={[
-          { src: '/Sky/skygook.jpg', alt: 'VR image' },
+          { src: '/Sky/screensky.png', alt: 'VR image' },
         ]}
       />
 
@@ -119,6 +116,14 @@ const Page = () => {
           It taught me different testing methodologies and helped me understand that without a solid foundation of study and analysis, it is impossible to satisfy the end user.<br /><br />
         </p>
       </div>
+
+
+
+      <ImageWrapper
+        images={[
+          { src: '/Sky/skygook.jpg', alt: 'VR image' },
+        ]}
+      />
 
       <div className={styles.contact}>
         <div className={styles.body}>
