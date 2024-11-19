@@ -71,7 +71,7 @@ const Page = () => {
 
       <ImageWrapper
         images={[
-          { src: '/Sharely/Sharely/bmw-video.mp4', alt: 'Sharely video', video: true },
+          { src: '/Sharely/Sharely/bmw-video.mp4#t=0.001', alt: 'Sharely video', video: true },
         ]}
       />
 
@@ -95,7 +95,7 @@ const Page = () => {
 
       <ImageWrapper
         images={[
-          { src: '/Sharely/Sharely/video_sharely.mp4', alt: 'Mockup image', video: true },
+          { src: '/Sharely/Sharely/video_sharely.mp4#t=0.001', alt: 'Mockup image', video: true },
         ]}
       />
 
