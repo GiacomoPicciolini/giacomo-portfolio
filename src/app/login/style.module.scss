@@ -120,12 +120,17 @@
   flex-shrink: 0;
   position: relative;
 
+
   .text {
     position: relative;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    @media (max-width: 500px) {
+      font-size: 10px;
+    }
   }
 
   svg {

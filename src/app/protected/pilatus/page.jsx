@@ -159,7 +159,6 @@ const Page = () => {
         <div className={styles.body}>
           <div className={styles.nav}>
             <div className={styles.projects}>
-              <a href='/sharely#top'>Next Project</a>
             </div>
             <a href='/sharely#top' className={styles.next}>
               <span>Sharely</span>

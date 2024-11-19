@@ -9,6 +9,10 @@
   height: 110vh;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: 900px) {
+    height: 50vh;
+  }
 }
 
 .heroImage {
@@ -110,6 +114,10 @@
   height: 100vh;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+
+  @media (max-width: 900px) {
+    height: 50vh;
+  }
 }
 
 // Fixed background image
@@ -278,6 +286,13 @@
         display: inline-flex;
         align-items: center;
         gap: 20px;
+
+        @media (max-width: 500px) {
+          display: flex;
+          margin: 0;
+          align-items: start;
+          flex-direction: column;
+        }
 
         span {
           font-size: 64px;

@@ -63,6 +63,10 @@
         line-height: normal;
         position: relative;
 
+        @media (max-width: 500px) {
+          font-size: 12px;
+        }
+
         /* Underline effect only for the text */
         .text {
           position: relative;

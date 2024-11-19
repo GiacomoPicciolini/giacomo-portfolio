@@ -129,7 +129,7 @@ const Page = () => {
         <div className={styles.body}>
           <div className={styles.nav}>
             <div className={styles.projects}>
-              <a href='/protected/pilatus#top'>Next Project</a>
+
             </div>
             <a href='/protected/pilatus#top' className={styles.next}>
               <span>Pilatus</span>

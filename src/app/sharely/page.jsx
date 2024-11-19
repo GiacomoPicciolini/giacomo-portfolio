@@ -137,7 +137,6 @@ const Page = () => {
         <div className={styles.body}>
           <div className={styles.nav}>
             <div className={styles.projects}>
-              <a href='/sky#top'>Next Project</a>
             </div>
             <a href='/sky#top' className={styles.next}>
               <span>Sky Television</span>
