@@ -56,7 +56,9 @@ export const IntroSection = ({ introImage }) => {
 };
 
 export const ContentBlock = ({ label, texts }) => (
-    <div className={styles.secondaryContent}>
+    <div className={styles.secondaryContent} style={{
+        gap: label == "" && window.innerWidth < 900 ? "0px" : "40px"
+    }}>
         <div className={styles.labelText}>
             {label != "" ? <><Image src={'/radio.svg'} width={24} height={24} alt='dot' /><p>{label}</p></> : <></>}
         </div>

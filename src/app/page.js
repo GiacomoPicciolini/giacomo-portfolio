@@ -8,6 +8,7 @@ import Header from '../components/Header'
 import Description from '../components/Description';
 import Contact from '../components/Contact';
 import Cards from '../components/Cards'
+import Experiences from '../components/Experiences'
 
 export default function Home() {
 

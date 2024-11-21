@@ -38,7 +38,7 @@
 .multiContentWrapper {
   display: flex;
   margin: 104px 15vw;
-  gap: 21px;
+  gap: 20px;
 
   .secondaryContent {
     flex: 1;
@@ -91,7 +91,6 @@
   @media (max-width: 900px) {
     height: 0;
     padding: 0;
-    gap: 0;
   }
 }
 
