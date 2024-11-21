@@ -187,6 +187,12 @@
     height: 24px;
     mix-blend-mode: difference;
     fill: white;
+    transition: transform 0.5s ease;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .closebutton:hover svg {
+    transform: rotate(90deg);
   }
 
   .closebutton:hover::before {

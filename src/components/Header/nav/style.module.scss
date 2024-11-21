@@ -16,8 +16,10 @@
   }
 
   .body {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
     overflow-y: scroll;
     padding: 0;
     box-sizing: border-box;
@@ -48,7 +50,8 @@
       z-index: 4;
 
       .closebutton {
-        background-color: transparent; /* A light transparent background */
+        background-color: transparent;
+        /* A light transparent background */
         border: 2px solid gray;
         border-radius: 50%;
         margin-top: 20px;
@@ -59,23 +62,30 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        backdrop-filter: blur(10px); /* Blurring the background */
-        -webkit-backdrop-filter: blur(10px); /* Safari support */
+        backdrop-filter: blur(10px);
+        /* Blurring the background */
+        -webkit-backdrop-filter: blur(10px);
+        /* Safari support */
       }
 
       .closebutton img {
         fill: white;
-        width: 24;
-        height: 24;
+        width: 24px;
+        height: 24px;
+        transition: transform 0.5s ease;
+      }
+
+
+      .closebutton:hover svg {
+        transform: rotate(90deg);
       }
 
       .closebutton:hover {
-        background-color: rgba(
-          255,
-          255,
-          255,
-          0.2
-        ); /* Slightly increase the transparency on hover */
+        background-color: rgba(255,
+            255,
+            255,
+            0.2);
+        /* Slightly increase the transparency on hover */
       }
     }
 
