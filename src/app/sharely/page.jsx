@@ -105,31 +105,25 @@ const Page = () => {
           <p>THE TAKEAWAY</p>
         </div>
         <p className={styles.secondaryText}>
-          This project is particularly important to me because I&apos;ve had the opportunity to be involved with it since the very beginning.
-          Like every startup, we&apos;ve experienced both incredibly high highs and equally challenging lows, but I&apos;ve learned from every single thing that has happened.
-        </p>
+          This project is particularly important to me because I’ve been involved since the very beginning.<br />
+          Like every startup, we’ve experienced both incredible highs and challenging lows, but I’ve learned from every single experience.</p>
         <ul className={styles.ul}>
           <li>
-            We&apos;ve gone through 3 rounds of investment, increasing not only the funds, but also the perceived value of the Company.
-          </li>
+            We’ve gone through three rounds of investment, increasing not only our funds but also the perceived value of the company.           </li>
           <li>
-            We&apos;ve revitalized a brand that was once struggling, growing the community from a few thousand members to tens of thousands of users.
-          </li>
+            We’ve revitalized a struggling brand, growing the community from a few thousand members to tens of thousands of users.           </li>
           <li>
-            We&apos;ve established partnerships with important Swiss compamies such as DiePost, Migros, and Interdiscount.
-          </li>
+            We’ve established partnerships with major Swiss companies such as DiePost, Migros, and Interdiscount          </li>
           <li>
-            We&apos;ve vertically increased transactions (+ 100% in 2022) on the website by streamlining the user journey and providing new functionalities centered around user needs.
-          </li>
+            By streamlining the user journey and adding new functionalities centered around user needs, we’ve significantly increased transactions on the website by 100% in 2022.           </li>
           <li>
-            Finally, we&apos;ve quintupled the number of items uploaded to our site, offering much more choice for every need.
-          </li>
+            We’ve also quintupled the number of items uploaded to our site, offering much more choice for every need.          </li>
         </ul>
       </div>
 
       <ImageWrapper
         images={[
-          { src: '/Sharely/sharely1.png', alt: 'Mockup image' },
+          { src: '/Sharely/sharely1.jpg', alt: 'Mockup image' },
         ]}
       />
 

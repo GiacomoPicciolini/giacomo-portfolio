@@ -72,8 +72,8 @@ const Page = () => {
 
       <ImageWrapper
         images={[
-          { src: '/Sky/sky2.jpg', alt: 'sky' },
-          { src: '/Sky/sky6.jpg', alt: 'sky' },
+          { src: '/Sky/01.jpg', alt: 'sky' },
+          { src: '/Sky/02.jpg', alt: 'sky' },
         ]}
       />
 
@@ -84,15 +84,15 @@ const Page = () => {
         </div>
         <div className={styles.secondaryText}>
           <h4>Identifying the differences</h4>
-          <p>Although both Sky Go and Sky On Demand are two applications, they are used on completely different platforms: the former on mobile devices, the latter is an OTT app, used directly on television. The goal of the team was to conduct tests trying to understand where to unify the products experience and where to differentiate them.</p>
+          <p>Although Sky Go and Sky On Demand are both applications, they are used on completely different platforms: Sky Go on mobile devices and Sky On Demand as an OTT app on television. The team’s goal was to conduct tests to determine where to unify the user experience and where to differentiate it.</p>
           <br />
           <br />
           <h4>Expanding the user base</h4>
-          <p>Sky was certainly among the first companies to launch streaming apps, but it later had to contend with new platforms taking over the market. One of the objectives was, by analyzing user requests and comparing them with the latest trends and choices of various competitors, to understand which new features to develop to make the experience increasingly satisfying.</p>
+          <p>Sky was one of the first companies to launch streaming apps, but it later had to compete with new platforms entering the market. One of the objectives was to analyze user requests and compare them with the latest trends and choices of various competitors. This analysis helped determine which new features to develop, making the user experience increasingly satisfying.</p>
           <br />
           <br />
           <h4>Understanding the User</h4>
-          <p>Coming from a television background, user research has always been fundamental for the company. From the outset, I had the opportunity to be in close contact with a large portion of Sky subscribers to conduct product tests with a perfectly profiled audience.</p>
+          <p>User research has always been fundamental for the company. From the outset, I had the opportunity to closely interact with a significant portion of Sky subscribers, conducting product tests with a perfectly profiled audience.</p>
         </div>
       </div>
 
@@ -108,13 +108,11 @@ const Page = () => {
           <p>THE TAKEAWAY</p>
         </div>
         <p className={styles.secondaryText}>
-          This experience has been truly formative for several reasons. During my time at Sky, we launched new features, created new sections in our apps, and improved the usability of different functionalities based on the feedback we received. <br /><br />
-          The most significant part of my work, has been done on the redesign of the User Experience of the Log In and onboarding process of the App, making it accessible from different platforms and simplifiyng the whole journey, reducing time and effort.<br /><br />
-          However, in this case, I believe it is more appropriate to focus on the various skills acquired rather than on the data.<br /><br />
-          It taught me the dynamics of a multinational corporation, how to work and collaborate within a large company.<br /><br />
-          It introduced me to a new method of design, where data visualization is at the heart of the project.<br /><br />
-          It taught me different testing methodologies and helped me understand that without a solid foundation of study and analysis, it is impossible to satisfy the end user.<br /><br />
-        </p>
+          This experience has been truly formative for several reasons. During my time at Sky, we launched new features, created new sections in our apps, and improved the usability of various functionalities based on user feedback.
+          <br /><br />
+          The most significant part of my work was redesigning the user experience for the login and onboarding process of the app. This involved making it accessible across different platforms and simplifying the entire journey, reducing time and effort for users.
+          <br /><br />
+          However, I believe it is more appropriate to focus on the various skills I acquired rather than the data. This experience taught me the dynamics of a multinational corporation and how to work and collaborate within a large company. It introduced me to a new method of design, where data visualization is central to the project. I learned different testing methodologies and understood that without a solid foundation of study and analysis, it is impossible to satisfy the end user.        </p>
       </div>
 
 

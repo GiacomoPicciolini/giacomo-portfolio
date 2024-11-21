@@ -49,7 +49,7 @@
 
   @media (max-width: 900px) {
     flex-direction: column;
-    gap: 40px;
+    gap: 0;
   }
 }
 
@@ -87,6 +87,12 @@
   font-size: 24px;
   font-weight: 700;
   line-height: normal;
+
+  @media (max-width: 900px) {
+    height: 0;
+    padding: 0;
+    gap: 0;
+  }
 }
 
 .primaryText {
@@ -192,10 +198,11 @@
 
   .doubleDescriptionImage {
     position: relative;
-    height: 50vh;
+    height: 70vh;
     width: 50vw;
 
     @media (max-width: 900px) {
+      height: 40vh;
       width: 100vw;
     }
   }
@@ -208,7 +215,11 @@
   .singleDescriptionImage {
     position: relative;
     width: 100vw;
-    height: 900px;
+    height: 70vh;
+
+    @media (max-width: 900px) {
+      height: 40vh;
+    }
   }
 
   @media (max-width: 900px) {

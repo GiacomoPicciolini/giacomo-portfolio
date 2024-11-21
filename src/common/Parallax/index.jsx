@@ -57,7 +57,7 @@ export const IntroSection = ({ introImage }) => {
 
 export const ContentBlock = ({ label, texts }) => (
     <div className={styles.secondaryContent}>
-        <div className={label != "" ? styles.labelText : ""}>
+        <div className={styles.labelText}>
             {label != "" ? <><Image src={'/radio.svg'} width={24} height={24} alt='dot' /><p>{label}</p></> : <></>}
         </div>
 
