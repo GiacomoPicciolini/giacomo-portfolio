@@ -313,6 +313,33 @@
           font-size: 64px;
           font-style: italic;
           font-weight: 700;
+          position: relative;
+          /* Needed for the pseudo-element */
+        }
+
+        span::after {
+          border-radius: 8%;
+          content: '';
+          /* Empty content for the pseudo-element */
+          position: absolute;
+          bottom: -5px;
+          /* Position it at the bottom of the span */
+          left: 0;
+          width: 100%;
+          /* Full width of the span */
+          height: 4px;
+          /* Thickness of the underline */
+          background-color: white;
+          /* Set the color of the underline */
+          opacity: 0;
+          /* Start with the line invisible */
+          transition: opacity 0.3s ease-in-out;
+          /* Animate opacity */
+        }
+
+        span:hover::after {
+          opacity: 1;
+          /* On hover, make the line visible */
         }
       }
 
@@ -434,18 +461,18 @@
 
   }
 
-    .closebutton svg {
-      width: 24px;
-      height: 24px;
-      mix-blend-mode: difference;
-      fill: white;
-      transition: transform 0.5s ease;
-      transform: translate3d(0, 0, 0);
-    }
-  
-    .closebutton:hover svg {
-      transform: rotate(90deg);
-    }
+  .closebutton svg {
+    width: 24px;
+    height: 24px;
+    mix-blend-mode: difference;
+    fill: white;
+    transition: transform 0.5s ease;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .closebutton:hover svg {
+    transform: rotate(90deg);
+  }
 
   .closebutton:hover::before {
     filter: none;
