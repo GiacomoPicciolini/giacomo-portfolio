@@ -1,5 +1,4 @@
-import React from 'react';
-import { useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from "../page.module.scss"
@@ -55,25 +54,33 @@ export const IntroSection = ({ introImage }) => {
     );
 };
 
-export const ContentBlock = ({ label, texts }) => (
-    <div className={styles.secondaryContent} style={{
-        gap: label == "" && window.innerWidth < 900 ? "0px" : "40px"
-    }}>
-        <div className={styles.labelText}>
-            {label != "" ? <><Image src={'/radio.svg'} width={24} height={24} alt='dot' /><p>{label}</p></> : <></>}
-        </div>
+export const ContentBlock = ({ label, texts }) => {
+    const [width, setWidth] = useState(1200)
 
-        <p className={styles.secondaryText}>
-            {texts.map((text, index) => (
-                <React.Fragment key={index}>
-                    {text}
-                    <br />
-                    <br />
-                </React.Fragment>
-            ))}
-        </p>
-    </div>
-);
+    useEffect(() => {
+        setWidth(window.innerWidth);
+    }, []);
+
+    return (
+        <div className={styles.secondaryContent} style={{
+            gap: label == "" && width < 900 ? "0px" : "40px"
+        }}>
+            <div className={styles.labelText}>
+                {label != "" ? <><Image src={'/radio.svg'} width={24} height={24} alt='dot' /><p>{label}</p></> : <></>}
+            </div>
+
+            <p className={styles.secondaryText}>
+                {texts.map((text, index) => (
+                    <React.Fragment key={index}>
+                        {text}
+                        <br />
+                        <br />
+                    </React.Fragment>
+                ))}
+            </p>
+        </div>
+    )
+};
 
 
 export const ImageWrapper = ({ images }) => (
