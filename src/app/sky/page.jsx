@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
-import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -11,7 +10,7 @@ import styles from '../../common/page.module.scss';
 import { IntroSection, ImageWrapper, ParallaxSection, ContentBlock } from "../../common/Parallax"
 
 import image1 from '../../../public/Sky/copertina_sky.jpg';
-import image2 from '../../../public/Sky/screensky.png';
+import image2 from '../../../public/Sky/sky4.jpg';
 
 const Page = () => {
   useEffect(() => {
@@ -69,6 +68,8 @@ const Page = () => {
           &quot;Having had the opportunity to work in different roles has taught me how to communicate clearly and effectively, with a strong emphasis on data visualization and visual clarity in messaging&quot;
         </h3>
       </div>
+
+      <ParallaxSection backgroundImage={image2} />
 
       <ImageWrapper
         images={[

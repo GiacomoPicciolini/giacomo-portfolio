@@ -99,7 +99,7 @@ const Page = () => {
 
       <ImageWrapper
         images={[
-          { src: '/Pilatus/VR_ok.jpg', alt: 'VR image' },
+          { src: '/Pilatus/vr.jpg', alt: 'VR image' },
         ]}
       />
 

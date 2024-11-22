@@ -123,7 +123,7 @@ const Page = () => {
 
       <ImageWrapper
         images={[
-          { src: '/Sharely/sharely1.jpg', alt: 'Mockup image' },
+          { src: '/Sharely/sharely1.jpg', alt: 'Mockup image', fullsize: true },
         ]}
       />
 
