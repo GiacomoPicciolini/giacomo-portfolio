@@ -14,10 +14,18 @@
 
 .descriptionone {
   padding: 16px 4%;
+
+  @media (max-width: 900px) {
+    padding: 16px 8%;
+  }
 }
 
 .descriptiontwo {
   padding: 16px 8%;
+
+  @media (max-width: 900px) {
+    padding: 16px 8%;
+  }
 }
 
 .doubleImage {
