@@ -16,7 +16,7 @@ export default function index() {
                     <h2>Get in Touch?</h2>
                 </div>
                 <div className={styles.nav}>
-                    <a href='CV'>
+                    <a href="/giacomo_picciolini.pdf" download>
                         <span className={styles.firstImage}>
                             <Image color="white" width={24} height={24} alt="Tel" src={"/arrow_forward.svg"} />
                         </span>
