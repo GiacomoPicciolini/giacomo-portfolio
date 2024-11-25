@@ -142,3 +142,11 @@ body::before {
   opacity: 0.2; /* Adjust opacity */
   z-index: -1; /* Ensure the image stays behind all content */
 }
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}

@@ -35,7 +35,7 @@ export default function Home() {
         </AnimatePresence>
         <Landing />
         <Description />
-        <Cards />
+        <Experiences />
         <Contact />
       </main>
     </>
