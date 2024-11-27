@@ -61,7 +61,7 @@ export default async function SignIn() {
           <div className={styles.warning}>
             <div></div>
             <div>
-              <p>You can find the password in my CV or contact me @</p>
+              <p>You can find the password in my CV or contact me @ </p>
               <a
                 className={styles.link}
                 href='mailto:giacomo.picciolini3@gmail.com'
