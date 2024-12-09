@@ -12,7 +12,7 @@ export const authOptions: NextAuthOptions = {
         },
       },
       async authorize(credentials, _request) {
-        if (credentials?.password == 'pilatus') {
+        if (credentials?.password == 'Pilatus') {
           return { id: '0' };
         } else {
           return null;
@@ -23,7 +23,7 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
-  secret: 'pilatus',
+  secret: 'Pilatus',
   pages: {
     signIn: '/login',
   },
