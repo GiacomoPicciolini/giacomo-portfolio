@@ -23,7 +23,7 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: 'jwt',
   },
-  secret: 'Pilatus',
+  secret: 'pilatus',
   pages: {
     signIn: '/login',
   },
