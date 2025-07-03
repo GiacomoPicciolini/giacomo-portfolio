@@ -1,0 +1,1 @@
+export { SharelyView } from './sharely'

@@ -1,0 +1,19 @@
+.imageBlock {
+  margin-top: 24px;
+}
+
+.largeImage {
+  position: relative;
+  aspect-ratio: 989 / 742;
+  overflow: hidden;
+  max-width: 989px;
+}
+
+.smallImage {
+  position: relative;
+  aspect-ratio: 604/453;
+  align-self: end;
+  max-width: 604px;
+  margin-top: 68px;
+  margin-left: auto;
+}

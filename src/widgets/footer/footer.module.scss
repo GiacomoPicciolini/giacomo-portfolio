@@ -1,0 +1,109 @@
+@use '@styles/_global/fonts' as *;
+@use '@styles/_global/breakpoints' as *;
+@use '@styles/_global/colors' as *;
+@use '@styles/_global/mixins' as *;
+
+.footer {
+  width: 100%;
+  padding: 0 12px 12px;
+  font-family: $font-inter;
+  color: white;
+  position: relative;
+  z-index: 10;
+
+  @include tablet {
+    padding: 0 20px 20px;
+  }
+
+  @include desktop {
+    padding: 0 40px 40px;
+  }
+}
+
+.footerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $custom-gradient_1;
+  border-radius: 12px;
+  padding: 40px 20px;
+  width: 100%;
+
+  @include tablet {
+    padding: 80px 40px;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.link {
+  color: $text-white;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include underline-hover($text-white, 1px, -1px, 0.3s);
+}
+
+.text {
+  color: $text-link;
+  @include underline-hover($text-link);
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+.linkedinIconStyle {
+  fill: $text-white;
+}
+
+.footerBg {
+  display: grid;
+  row-gap: 40px;
+  grid-template-areas:
+          'link link .'
+          'socialLinkedin socialDownload .'
+          'text text text';
+
+
+  @include tablet {
+    grid-template-areas:
+          'text text text text'
+          'socialDownload socialLinkedin link .';
+  }
+}
+
+.link {
+  grid-area: link;
+
+  @include tablet {
+    margin-left: 68px;
+  }
+}
+
+.socialLinkedin {
+  grid-area: socialLinkedin;
+
+  @include tablet {
+    margin-left: 79px;
+  }
+}
+
+.socialDownload {
+  grid-area: socialDownload;
+  margin-left: 14px;
+
+  @include tablet {
+    margin-left: 0;
+  }
+}
+
+.text {
+  grid-area: text;
+}

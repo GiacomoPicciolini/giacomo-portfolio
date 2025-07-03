@@ -1,0 +1,18 @@
+@use '@styles/_global/breakpoints' as *;
+
+.hint {
+  display: flex;
+  margin-top: 24px;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.iconSVG {
+  flex-shrink: 0;
+}
+
+.centered {
+  align-items: center;
+}

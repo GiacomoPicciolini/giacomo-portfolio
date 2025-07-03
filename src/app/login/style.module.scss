@@ -1,3 +1,8 @@
+@use '@styles/_global/colors' as *;
+@use '@styles/_global/fonts' as *;
+@use '@styles/_global/mixins' as *;
+@use '@styles/_global/breakpoints' as *;
+
 .body {
   display: flex;
   justify-content: center;
@@ -7,6 +12,7 @@
   position: relative;
   margin: 0;
   overflow: hidden;
+  background-color: $black;
 
   // Pseudo-element for the blurred background image
   &::before {
@@ -16,9 +22,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('/Pilatus/sim_ok2.jpg') 50% / cover no-repeat;
-    filter: blur(50px);
-    z-index: -1;
+    background: $protected-bg-gradient;
+    filter: blur(100px);
+    z-index: 1;
     transform: scale(1.4);
     /* Scale the image to 1.2 times its original size */
     transform-origin: center;
@@ -28,69 +34,58 @@
 
 .formWrapper {
   z-index: 100;
-  flex-shrink: 0;
+  width: 100%;
   border-radius: 12px;
-  background: #fff;
   position: relative;
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   input {
     border-radius: 6px;
+    width: 100%;
+    height: 84px;
+    color: $white1;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.75px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    width: 80%;
-    height: 48px;
-    justify-content: center;
     align-items: center;
-    flex-shrink: 0;
-    margin-bottom: 40px;
+    transition: 0.3s ease-in-out;
 
-    border: 1px solid #5e6368;
+    border: 1px solid $border-color;
     padding-left: 16px;
 
+    &:focus {
+      border-color: $text-white;
+    }
+
     &::placeholder {
-      color: #5e6368;
-      font-family: Roboto;
-      font-size: 16px;
-      font-style: normal;
+      color: $white1;
+      font-family: $font-inter;
+      font-size: 24px;
       font-weight: 400;
-      line-height: 24px;
+      line-height: 36px;
+      letter-spacing: 0.75px;
     }
   }
 }
 
-.labelText {
-  display: flex;
-  height: 28px;
-  padding-top: 13px;
-  padding-right: 20%;
-  align-items: center;
-  gap: 20px;
-  flex-shrink: 0;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: normal;
-  margin-bottom: 40px;
-}
-
 .description {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.big {
+  margin: 12px 0 80px;
+  color: $text-white;
   font-size: 20px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
-}
+  text-align: center;
 
-.small {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  @include tablet {
+    margin: 12px 0 120px;
+  }
 }
 
 .warning {
@@ -109,104 +104,28 @@
   }
 }
 
-.link {
-  color: black;
-  margin-top: 12px;
-  text-decoration: none;
-  display: inline-flex;
-  justify-content: center;
-  gap: 12px;
-  align-items: center;
-  flex-shrink: 0;
+.text {
   position: relative;
+  font-family: $font-inter;
+  color: $text-white;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
 
-
-  .text {
-    position: relative;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-
-    @media (max-width: 500px) {
-      font-size: 10px;
-    }
-  }
-
-  svg {
-    fill: black;
-  }
+  @include underline-hover($text-white, 1px, -1px, 0.3s);
 }
 
-.closebuttonContainer {
-  mix-blend-mode: difference;
-  position: fixed;
-  z-index: 10000;
-
-  .closebutton {
-    background-color: transparent;
-    /* A light transparent background */
-    margin-top: 40px;
-    margin-left: 4vw;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    /* Blurring the background */
-    -webkit-backdrop-filter: blur(10px);
-    /* Safari support */
-    position: relative;
-    border-radius: 100%;
-    /* Ensure the button itself remains circular */
-  }
-
-  /* Creating the border and applying the blur to it using ::before */
-  .closebutton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid gray;
-    border-radius: 50%;
-    box-sizing: border-box;
-    filter: blur(1.5px);
-    /* Applying blur to the border */
-    transition: filter 0.3s ease;
-    /* Smooth transition for blur */
-    pointer-events: none;
-    /* Ignore pointer events for this element */
-  }
-
-  .closebutton svg {
-    width: 24px;
-    height: 24px;
-    mix-blend-mode: difference;
-    fill: white;
-    transition: transform 0.5s ease;
-    transform: translate3d(0, 0, 0);
-  }
-
-  .closebutton:hover svg {
-    transform: rotate(90deg);
-  }
-
-  .closebutton:hover::before {
-    filter: none;
-    /* Remove the blur effect on hover */
-  }
-}
-
-/* Base styles remain unchanged */
+.closeButtonWrapper {
+  position: absolute;
+  z-index: 200;
+  right: 40px;
+  top: 40px;
+ }
 
 @media (max-width: 900px) {
   .body {
     input {
-      height: 40px;
+      height: 84px;
       /* Decrease height for inputs */
       margin-bottom: 20px;
       /* Reduce margin */
@@ -227,6 +146,10 @@
     /* Decrease font size for labels */
     padding-right: 0;
     /* Remove right padding */
+
+    h2 {
+      text-align: center;
+    }
   }
 
   .big {
@@ -238,16 +161,37 @@
     font-size: 10px;
     /* Adjust font size for smaller text */
   }
+}
 
-  .warning {
-    font-size: 14px;
-    /* Decrease warning text size */
-    margin-right: 0;
-    /* Reset margin for warnings */
-  }
+.warning {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  margin-top: 140px;
 
-  .link {
-    font-size: 14px;
-    /* Adjust link text size */
+  @include tablet {
+    margin-top: 240px;
   }
+}
+
+.cancelLink {
+  font-family: $font-monument;
+  color: $text-white;
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 100%;
+
+  @include underline-hover($text-white, 1px, -1px, 0.3s);
+}
+
+.title {
+  font-family: $font-monument;
+  color: $text-white;
+  font-size: clamp(1.5rem, 6vw + 0.25rem, 4.5rem);
+  font-weight: 400;
+  text-align: center;
+  max-width: 720px;
+  line-height: 100%;
 }

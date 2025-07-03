@@ -1,0 +1,45 @@
+@use '@styles/_global/breakpoints' as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  margin-top: 40px;
+
+  @include tablet {
+    margin-top: 80px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 120px;
+    padding: 0 20px;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.label {
+  font-weight: 700;
+
+  &::after {
+    content: '_';
+    opacity: 0.6;
+    margin-left: 2px;
+  }
+}
+
+.value {
+  margin-left: 4px;
+}

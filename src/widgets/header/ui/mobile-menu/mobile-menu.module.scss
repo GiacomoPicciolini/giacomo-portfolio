@@ -1,0 +1,159 @@
+@use '@styles/_global/colors' as *;
+@use '@styles/_global/breakpoints' as *;
+@use '@styles/_global/fonts' as *;
+@use '@styles/_global/mixins' as *;
+
+.menu {
+  min-height: 100vh;
+  position: fixed;
+  width: 100vw;
+  right: 0;
+  top: 0;
+  color: $text-white;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  background-color: $black;
+  z-index: 100000;
+}
+
+.scrolledBlock {
+  flex: 1;
+  overflow-y: auto;
+  position: relative;
+  z-index: 10000;
+}
+
+.nav {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 48px;
+  padding: 20px 12px 0;
+
+  @include tablet {
+    padding: 20px 20px 0;
+  }
+
+  @include desktop {
+    padding: 20px 40px 0 80px;
+  }
+
+  a {
+    color: $text-white;
+    font-weight: 400;
+    font-family: $font-monument;
+  }
+}
+
+.menuClosed {
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+}
+
+.menuOpened {
+  left: 0;
+  top: 0;
+}
+
+.socialEl {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 57px;
+}
+
+.iconsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
+
+.iconLink {
+  display: flex;
+}
+
+.iconLinkDownload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cvWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cvTitle {
+  font-family: $font-inter;
+  font-size: 20px;
+}
+
+.phone {
+  font-family: $font-inter !important;
+  font-size: 20px;
+  font-weight: 500;
+  color: $text-white;
+
+  @include underline-hover($text-white, 1px, -1px, 0.3s);
+}
+
+.headerBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $text-white;
+  padding: 20px 12px;
+
+  @include tablet {
+    padding: 20px;
+  }
+
+  @include desktop {
+    padding: 20px 40px;
+  }
+}
+
+.menuList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include desktop {
+    gap: 32px;
+  }
+}
+
+.menuItem {
+  @include underline-hover($text-white, 1px, -1px, 0.3s);
+}
+
+.videoWrapper {
+  max-width: 526px;
+  margin-top: auto;
+}
+
+.blockClassName {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+.linkedinIconStyle {
+  @include desktop {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}

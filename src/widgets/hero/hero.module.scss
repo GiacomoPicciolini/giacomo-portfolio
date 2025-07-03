@@ -1,0 +1,115 @@
+@use '@styles/_global/breakpoints' as *;
+
+.wrapper {
+  position: absolute;
+  inset: 0;
+  padding: 8rem 2rem;
+  overflow: hidden;
+  z-index: 1;
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+
+  .topLeft {
+    position: absolute;
+    top: 220px;
+    left: calc(50% - 800px);
+    //transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .rightMiddle {
+    position: absolute;
+    right: -20px;
+    top: 930px;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .rightCircle {
+    position: absolute;
+    right: 0;
+    top: 1170px;
+    z-index: 1;
+  }
+
+  .pilatus1 {
+    position: absolute;
+    left: 0;
+    top: 500px;
+    z-index: 1;
+  }
+
+  .pilatus2 {
+    position: absolute;
+    right: 50%;
+    transform: translateX(110%);
+    top: -50px;
+    z-index: 1;
+  }
+
+  .common1 {
+    position: absolute;
+    left: calc(50% - 650px);
+    top: 500px;
+    z-index: 1;
+  }
+
+  .common2 {
+    position: absolute;
+    right: 0;
+    top: 400px;
+    z-index: 1;
+  }
+
+  .design1 {
+    position: absolute;
+    left: calc(50% - 650px);
+    top: 500px;
+    z-index: 1;
+  }
+
+  .design2 {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 200px);
+    z-index: 1;
+  }
+
+  .vr1 {
+    position: absolute;
+    left: calc(50% + 300px);
+    top: calc(50% - 970px);
+    z-index: 1;
+  }
+
+  .sky1 {
+    position: absolute;
+    left: 0;
+    top: 500px;
+    z-index: 1;
+  }
+
+  .sky2 {
+    position: absolute;
+    right: 0;
+    top: 670px;
+    z-index: 1;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.group {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}

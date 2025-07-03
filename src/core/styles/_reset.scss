@@ -1,0 +1,213 @@
+@use '@styles/_global/breakpoints' as *;
+@use '@styles/_global/fonts' as *;
+@use '@styles/_global/colors' as *;
+@use '@styles/_global/mixins' as *;
+
+/* Reset and base styles  */
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type='submit'] {
+  display: inline-block;
+  box-shadow: none;
+  background: none;
+}
+
+button:not(:disabled),
+input[type='submit']:not(:disabled) {
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+textarea:focus,
+textarea:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  overflow-y: auto;
+  transition: color 0.4s ease;
+  font-family: $font-inter;
+  background-color: #f8f9fa;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.dark-blue-icon {
+  display: inline-block;
+}
+
+.blueish-icon {
+  display: none;
+}
+
+body {
+  color: #1c1b1f;
+  .title-link,
+  .heroLinks {
+    color: #1c1b1f;
+  }
+}
+
+body.dark-theme,
+body.bg-vr,
+body.bg-design {
+  color: #f0f4f8;
+
+  .title-link,
+  .heroLinks {
+    color: #f0f4f8;
+  }
+
+  .dark-blue-icon {
+    display: none;
+  }
+
+  .blueish-icon {
+    display: inline-block;
+  }
+}
+
+.menuButton {
+  @include menu-button-style($black, $hovered-button-light-theme, $bg-default);
+}
+
+body.bg-vr .menuButton,
+body.bg-design .menuButton {
+  @include menu-button-style($bg-default, $bg-default, $black);
+}
+
+.menuButtonBlack {
+  margin-left: auto;
+  @include menu-button-style($bg-default, $bg-default, $black);
+}
+
+.menuButtonWhite {
+  @include menu-button-style($black, $hovered-button-light-theme, $bg-default);
+}
+
+.paragraphTitle {
+  font-family: $font-monument;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 400;
+  text-decoration: underline;
+
+  @include tablet {
+    font-size: 32px;
+  }
+}
+
+.paragraphText {
+  font-family: $font-inter;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 18px;
+
+  @include desktop {
+    font-size: 20px;
+  }
+}
+
+.disc {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.markedItem {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.startSpacing {
+  margin-top: 24px;
+}
+
+.tippy-box {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+.tippy-content {
+  padding: 0 !important;
+}

@@ -1,0 +1,9 @@
+.homeLayout {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeMain {
+  flex-grow: 1;
+}

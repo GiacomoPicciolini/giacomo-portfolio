@@ -1,0 +1,13 @@
+@use '@styles/_global/breakpoints' as *;
+
+.firstVideoBlock {
+  margin-top: 24px;
+}
+
+.limitedImage {
+  aspect-ratio: 857/702;
+  @include desktop {
+    max-width: 70%;
+    margin: 120px 0 0 auto !important;
+  }
+}
