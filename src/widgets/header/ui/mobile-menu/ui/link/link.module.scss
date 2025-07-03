@@ -1,0 +1,25 @@
+@use '@styles/_global/mixins' as *;
+@use '@styles/_global/fonts' as *;
+@use '@styles/_global/breakpoints' as *;
+@use '@styles/_global/colors' as *;
+
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: $font-monument;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 400;
+
+  @include underline-hover($text-white, 1px, -2px, 0.3s);
+
+  @include desktop {
+    font-size: 72px;
+  }
+}
+
+.link:last-child {
+  border-bottom: 0;
+}

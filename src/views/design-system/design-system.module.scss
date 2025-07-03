@@ -1,0 +1,59 @@
+@use '@styles/_global/breakpoints' as *;
+
+.wrapper {
+  display: flex;
+}
+
+.aspectRatio {
+  aspect-ratio: 586 / 370;
+}
+
+.imageRatio {
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;
+}
+
+.bottomImagesBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include desktop {
+    flex-direction: row;
+  }
+}
+
+.gridElement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @include desktop {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.shadow {
+  box-shadow:
+    0 4px 4px 0 rgba(0, 0, 0, 0.3),
+    0 8px 12px 6px rgba(0, 0, 0, 0.15);
+}
+
+.wrapper {
+  margin-top: 20px;
+
+  @include tablet {
+    margin-top: 40px;
+  }
+
+  @include desktop {
+    margin-top: 60px;
+  }
+}
+
+.textStyle {
+  margin-top: 0;
+}

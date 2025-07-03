@@ -1,0 +1,14 @@
+@use '@styles/_global/breakpoints' as *;
+
+.closeButton {
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  @include desktop {
+    width: 54px;
+    height: 54px;
+  }
+}

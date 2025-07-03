@@ -1,0 +1,37 @@
+@use '@styles/_global/colors' as *;
+@use '@styles/_global/fonts' as *;
+@use '@styles/_global/mixins' as *;
+
+.iconLink {
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  span {
+    position: relative;
+    width: fit-content;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $text-white;
+      transition: width 0.3s ease-out;
+    }
+  }
+
+  &:hover span::before {
+    width: 100%;
+  }
+}
+
+.cvTitle {
+  color: $text-white;
+  font-family: $font-inter;
+  font-size: 20px;
+  font-weight: 500;
+}

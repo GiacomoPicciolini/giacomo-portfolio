@@ -1,0 +1,334 @@
+@use '@styles/_global/breakpoints' as *;
+
+// Full-page container
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+// Hero section
+.heroSection {
+  height: 110vh;
+  overflow: hidden;
+  position: relative;
+
+  @media (max-width: 900px) {
+    height: 50vh;
+  }
+}
+
+.heroImage {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+// Content section
+.contentWrapper {
+  display: flex;
+  margin: 10rem 4vw;
+  margin-top: 2rem;
+  padding-top: 10rem;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.titleContentWrapper {
+  text-align: center;
+  display: flex;
+  margin: 104px 15vw;
+  gap: 21px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  @media (max-width: 900px) {
+    font-size: 32px;
+  }
+}
+
+// Double description section
+.singleContentWrapper {
+  display: flex;
+  margin: 104px 15vw;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.labelText {
+  display: flex;
+  height: 28px;
+  padding-top: 13px;
+  padding-right: 20%;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+
+  @media (max-width: 900px) {
+    height: 0;
+    padding: 0;
+  }
+}
+
+.primaryText {
+  font-size: clamp(24px, 3vw, 48px);
+  font-weight: 600;
+  line-height: normal;
+}
+
+.secondaryText {
+  margin-top: 40px;
+}
+
+// Parallax section
+.parallaxSection {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+
+  @media (max-width: 900px) {
+    height: 50vh;
+  }
+}
+
+// Fixed background image
+.fixedBackground {
+  position: fixed;
+  top: -10vh;
+  left: 0;
+  height: 120vh;
+  width: 100%;
+}
+
+.backgroundImageWrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.imageWrapper {
+  display: flex;
+  height: 100%;
+  gap: 40px;
+
+  .imageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1248/702;
+  }
+
+  .baseImage,
+  .hoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+    object-fit: cover;
+  }
+
+  .baseImage {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .hoverImage {
+    opacity: 0;
+    z-index: 2;
+  }
+
+  .imageContainer:hover .baseImage {
+    opacity: 0;
+  }
+
+  .imageContainer:hover .hoverImage {
+    opacity: 1;
+  }
+
+  .fourDescriptionImage {
+    position: relative;
+    height: 40vh;
+    width: 25vw;
+
+    @media (max-width: 900px) {
+      width: 100vw;
+    }
+  }
+
+  .doubleDescriptionImage {
+    position: relative;
+    height: 70vh;
+    width: 50vw;
+
+    @media (max-width: 900px) {
+      height: 40vh;
+      width: 100vw;
+    }
+  }
+
+  .singleDescriptionVideo {
+    position: relative;
+  }
+
+  .singleDescriptionImage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1248/702;
+  }
+}
+
+.hoverInfoContainer {
+  margin: 0 4vw;
+
+  .hoverInfo {
+    padding-top: 20px;
+    color: #626262;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  @media (max-width: 900px) {
+    margin: 0;
+
+    .hoverInfo {
+      display: none;
+    }
+  }
+}
+
+.closebuttonContainer {
+  mix-blend-mode: difference;
+  position: fixed;
+  z-index: 10000;
+
+  .closebutton {
+    background-color: transparent;
+    /* A light transparent background */
+    margin-top: 40px;
+    margin-left: 4vw;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    /* Blurring the background */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    position: relative;
+    border-radius: 100%;
+    /* Ensure the button itself remains circular */
+  }
+
+  /* Creating the border and applying the blur to it using ::before */
+  .closebutton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid gray;
+    border-radius: 50%;
+    box-sizing: border-box;
+    filter: blur(1.5px);
+    /* Applying blur to the border */
+    transition: filter 0.3s ease;
+    /* Smooth transition for blur */
+    pointer-events: none;
+    /* Ignore pointer events for this element */
+  }
+
+  .closebutton svg {
+    width: 24px;
+    height: 24px;
+    mix-blend-mode: difference;
+    fill: white;
+    transition: transform 0.5s ease;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .closebutton:hover svg {
+    transform: rotate(90deg);
+  }
+
+  .closebutton:hover::before {
+    filter: none;
+    /* Remove the blur effect on hover */
+  }
+}
+
+.ul {
+  padding-left: 40px;
+  font-size: clamp(12px, 3vw, 24px);
+  font-weight: 500;
+  line-height: normal;
+
+  li {
+    padding-top: 20px;
+  }
+}
+
+.smallCenteredContainer {
+  width: 100%;
+  margin: 0 auto;
+
+  @include desktop {
+    max-width: 70%;
+  }
+
+  @include large-desktop {
+    max-width: 50%;
+  }
+}
+
+.secondaryContent {
+  margin-top: 40px;
+
+  @include tablet {
+    margin-top: 80px;
+  }
+
+  @include desktop {
+    margin-top: 120px;
+  }
+}
+
+.blockSpacing {
+  margin: 40px auto 0;
+
+  @include tablet {
+    margin: 80px auto 0;
+  }
+
+  @include desktop {
+    margin: 120px auto  0;
+  }
+}
+
+.firstImage {
+  margin-top: 24px;
+}
+
+.baseImageStyle {
+  object-fit: cover;
+  object-position: top;
+  border-radius: 12px;
+  overflow: hidden;
+}

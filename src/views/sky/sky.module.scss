@@ -1,0 +1,15 @@
+@use '@styles/_global/fonts' as *;
+@use '@styles/_global/breakpoints' as *;
+
+.skyTitle {
+  font-family: $font-monument;
+  font-size: 24px;
+  font-weight: 400;
+  max-width: 1028px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include desktop {
+    font-size: 48px;
+  }
+}

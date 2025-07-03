@@ -1,0 +1,155 @@
+@use '@styles/_global/breakpoints' as *;
+@use '@styles/_global/colors' as *;
+@use '@styles/_global/fonts' as *;
+
+@mixin nav-link-base {
+  font-size: clamp(1.5rem, 6vw + 0.25rem, 4.5rem);
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  font-weight: 400;
+}
+
+.listItem {
+  display: flex !important;
+  align-items: center;
+
+  @include nav-link-base;
+}
+
+.icon {
+  position: relative;
+  z-index: 10;
+  display: none;
+  margin-right: 16px;
+  transition: width 0.4s ease;
+  transition-duration: 0.4s;
+
+  @include desktop {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.arrowBlock {
+  width: 48px;
+  height: 48px;
+
+  @include desktop {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.pilatus,
+.vr,
+.common,
+.design,
+.sharely,
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  transition: background-color 0.3s ease;
+}
+
+.pilatus {
+  background-color: $bg-pilatus-website;
+
+  &-is-active {
+    color: $pilatus-hover-link !important;
+  }
+}
+
+.vr {
+  background-color: $bg-vr-website;
+
+  &-is-active {
+    color: $vr-hover-link !important;
+  }
+}
+
+.common {
+  background-color: $bg-common-website;
+
+  &-is-active {
+    color: $common-hover-link !important;
+  }
+}
+.design {
+  background-color: $bg-design-system;
+
+  &-is-active {
+    color: $system-hover-link !important;
+  }
+}
+
+.sharely {
+  background: $bg-sharely-website;
+
+  &-is-active {
+    color: $sharely-hover-link !important;
+  }
+}
+
+.sky {
+  background: $bg-sky-gradient;
+
+  &-is-active {
+    color: $sky-hover-link !important;
+  }
+}
+
+.icon-pilatus {
+  fill: $pilatus-hover-link;
+}
+
+.icon-sharely {
+  fill: $sharely-hover-link;
+}
+
+.nav {
+  width: 100%;
+  max-width: 2000px;
+}
+
+.navList {
+  position: relative;
+  z-index: 10;
+  list-style: none;
+
+  margin-top: 80px;
+
+  @include tablet {
+    margin-left: 36px;
+  }
+
+  @include desktop {
+    margin-left: 72px;
+    width: 100%;
+    max-width: 1600px;
+  }
+
+  li {
+    width: 100%;
+  }
+}
+
+.title {
+  font-family: $font-monument;
+  color: $text-default;
+  transition: color 0.3s ease;
+  font-weight: 400;
+}
+
+.smallIcon {
+  transition: width 0.3s ease;
+  width: 0;
+  overflow: hidden;
+}
+
+.transition {
+  transition: background-color 0.6s ease;
+}

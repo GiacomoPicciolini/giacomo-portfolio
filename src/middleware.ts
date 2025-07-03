@@ -1,7 +1,7 @@
-import { withAuth } from 'next-auth/middleware';
+import { withAuth } from 'next-auth/middleware'
 
 export default withAuth({
-  secret: 'pilatus', 
-});
+    secret: 'pilatus',
+})
 
-export const config = { matcher: ['/protected/:path*'] };
+export const config = { matcher: ['/protected/:path*'] }

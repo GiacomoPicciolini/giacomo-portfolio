@@ -1,0 +1,46 @@
+@use '@styles/_global/fonts' as *;
+@use '@styles/_global/breakpoints' as *;
+
+.homeView {
+  padding: 20px 12px 60px;
+  font-family: $font-monument;
+  position: relative;
+  z-index: 1;
+
+  @include tablet {
+    padding: 20px 20px 60px;
+  }
+
+  @include desktop {
+    padding: 160px 40px 282px;
+    display: flex;
+  }
+}
+
+.titleEl {
+  position: relative;
+  z-index: 10;
+  transition: color 0.3s ease;
+  max-width: 225px;
+  font-size: 16px;
+  line-height: 1.25;
+  font-family: $font-monument;
+  font-weight: 400;
+
+  @include tablet {
+    font-size: 28px;
+    max-width: 400px;
+  }
+
+  @include desktop {
+    font-size: 36px;
+    max-width: 506px;
+  }
+}
+
+.container {
+  @include desktop {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

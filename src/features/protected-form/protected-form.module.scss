@@ -1,0 +1,15 @@
+.form {
+  width: 100%;
+  max-width: 700px;
+}
+
+.inputWrapper {
+  width: 100%;
+  position: relative;
+}
+
+.eyeButton {
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 24px);
+}

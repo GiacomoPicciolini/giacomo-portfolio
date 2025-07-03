@@ -1,0 +1,34 @@
+@use '@styles/_global/breakpoints' as *;
+
+.gridElement {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include desktop {
+    gap: 4%;
+  }
+}
+
+.imageElement {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 600/702;
+}
+
+.gridElWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+
+  @include tablet {
+    width: 48%;
+    height: 48%;
+  }
+}

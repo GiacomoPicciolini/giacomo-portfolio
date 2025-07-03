@@ -1,0 +1,34 @@
+@use '@styles/_global/fonts' as *;
+@use '@styles/_global/colors' as *;
+@use '@styles/_global/breakpoints' as *;
+
+.header {
+  padding: 20px 12px;
+  font-family: $font-inter;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $text-default;
+  position: relative;
+  z-index: 10;
+
+  @include tablet {
+    padding: 20px;
+  }
+
+  @include desktop {
+    padding: 20px 40px;
+  }
+}
+
+.headerName {
+  font-family: $font-inter;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.heroLinks {
+  display: flex;
+  flex-direction: column;
+  color: $text-default;
+}

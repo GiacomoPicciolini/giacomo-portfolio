@@ -1,0 +1,66 @@
+@use '@styles/_global/breakpoints' as *;
+@use '@styles/_global/colors' as *;
+@use '@styles/_global/fonts' as *;
+
+.navWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 42px;
+}
+
+.next {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: $text-white;
+  font-family: $font-monument;
+  font-size: 32px;
+  line-height: 100%;
+
+  span {
+    display: none;
+    position: relative;
+    width: fit-content;
+    text-align: end;
+
+    @include tablet {
+      display: block;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $text-white;
+      transition: width 0.3s ease-out;
+    }
+  }
+
+  &:hover span::before {
+    width: 100%;
+  }
+}
+
+.nextImage {
+  transform: rotate(180deg);
+}
+
+.previous, .next {
+  transition: 0.3s ease-in-out;
+}
+
+.previous {
+  &:hover {
+    transform: translateX(-6px);
+  }
+}
+
+.next {
+  &:hover {
+    transform: translateX(6px);
+  }
+}
